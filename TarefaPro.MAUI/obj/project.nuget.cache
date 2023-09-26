@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ijrv0/BNBQh1kaZ2xJEM1jB9fFE67FO26CdNlQpBTbVsKY2jwZwfcJ+qPxv7Qu80mkQ46ZyTGtRri1ms1Gp6NA==",
+  "dgSpecHash": "d+FZujh2kVUwD81IjL8eRCXVxgzIYlPCPjtljQeo/cTJQCi/SmygK/nynAmKsoUQyF1XdjhNth3uFOcEpe285g==",
   "success": true,
-  "projectFilePath": "S:\\PROJETOS\\Projetos MAUI\\TarefaPro.MAUI\\TarefaPro.MAUI\\TarefaPro.MAUI.csproj",
+  "projectFilePath": "S:\\PROJETOS\\Projetos MAUI\\TarefaPro.MAUI\\TarefaProMAUI\\TarefaPro.MAUI\\TarefaPro.MAUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\root\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

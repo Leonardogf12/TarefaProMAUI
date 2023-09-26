@@ -49,6 +49,30 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
+	  <None Remove="Resources\Images\actions_icon.svg" />
+	  <None Remove="Resources\Images\add_icon.svg" />
+	  <None Remove="Resources\Images\blue_check.svg" />
+	  <None Remove="Resources\Images\blue_not_check.svg" />
+	  <None Remove="Resources\Images\calendar_icon.svg" />
+	  <None Remove="Resources\Images\edit_icon.svg" />
+	  <None Remove="Resources\Images\goback_icon.svg" />
+	  <None Remove="Resources\Images\green_check.svg" />
+	  <None Remove="Resources\Images\green_not_check.svg" />
+	  <None Remove="Resources\Images\hour_icon.svg" />
+	  <None Remove="Resources\Images\orange_check.svg" />
+	  <None Remove="Resources\Images\orange_not_check.svg" />
+	  <None Remove="Resources\Images\salmon_check.svg" />
+	  <None Remove="Resources\Images\salmon_not_check.svg" />
+	  <None Remove="Resources\Images\search_icon.svg" />
+	  <None Remove="Resources\Images\task_icon.svg" />
+	  <None Remove="Resources\Images\yellow_check.svg" />
+	  <None Remove="Resources\Images\yellow_not_check.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 		<PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
@@ -63,7 +87,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="MVVM\Views\CategoriesPage.xaml.cs">
+	    <DependentUpon>CategoriesPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="MVVM\Views\AddCategoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\CategoriesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\Components\Common\SearchBarComponent.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

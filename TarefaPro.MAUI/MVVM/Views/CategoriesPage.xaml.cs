@@ -12,4 +12,9 @@ public partial class CategoriesPage : ContentPage
 
 		BindingContext = ViewModel;
 	}
+
+    private async void AddCategory_Clicked(object sender, EventArgs e)
+    {
+		await Navigation.PushAsync(new AddCategoryPage());
+    }
 }

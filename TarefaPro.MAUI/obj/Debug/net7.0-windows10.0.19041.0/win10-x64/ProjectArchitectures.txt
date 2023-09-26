@@ -1,1 +1,1 @@
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaPro.MAUI\TarefaPro.MAUI.csproj;x64
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\TarefaPro.MAUI.csproj;x64
