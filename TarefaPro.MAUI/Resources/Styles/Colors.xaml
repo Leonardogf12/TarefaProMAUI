@@ -47,5 +47,9 @@
     <Color x:Key="PrimarySalmon">#FE866A</Color>
     <Color x:Key="PrimaryYellow">#EEC233</Color>
     <Color x:Key="PrimaryBlue">#11B7F3</Color>
+    <Color x:Key="PrimaryOrange">#EEA333</Color>
+    <Color x:Key="PrimaryGreen">#29B885</Color>
+
+
 
 </ResourceDictionary>

@@ -424,6 +424,13 @@
         <Setter Property="TextColor" Value="White" />
     </Style>
 
+    <Style x:Key="lblSecondary" TargetType="Label">
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="FontFamily" Value="MontserratRegular" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="{StaticResource Gray400}" />
+    </Style>
+
     <Style x:Key="borderSearch" TargetType="Border">
         <Setter Property="HeightRequest" Value="40" />
         <Setter Property="StrokeThickness" Value="0" />
@@ -456,8 +463,9 @@
         <Setter Property="FontFamily" Value="MontserratSemiBold" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="TextColor" Value="White" />
-        <Setter Property="BackgroundColor" Value="{StaticResource PrimarySalmon}" />
         <Setter Property="Text" Value="Novo" />
+        <Setter Property="HeightRequest" Value="45" />
+
     </Style>
 
 </ResourceDictionary>

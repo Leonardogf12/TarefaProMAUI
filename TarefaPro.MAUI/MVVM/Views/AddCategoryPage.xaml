@@ -13,7 +13,9 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="150" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+
         </Grid.RowDefinitions>
 
         <ImageButton
@@ -61,8 +63,82 @@
                 Style="{StaticResource entryForm}" />
         </Border>
 
-        <Button
+        <Grid
             Grid.Row="4"
+            ColumnSpacing="30"
+            RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="4"
+                Style="{StaticResource lblSecondary}"
+                Text="Selecione a Cor" />
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                HeightRequest="40"
+                Source="{Binding GreenCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checkgreen_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="1"
+                HeightRequest="40"
+                Source="{Binding BlueCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checkblue_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="2"
+                HeightRequest="40"
+                Source="{Binding SalmonCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checksalmon_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="3"
+                HeightRequest="40"
+                Source="{Binding YellowCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checkyellow_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="4"
+                HeightRequest="40"
+                Source="{Binding OrangeCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checkorange_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Grid>
+
+        <Button
+            Grid.Row="5"
+            BackgroundColor="{Binding BackgroundColorButtonNew}"
             Clicked="AddCategory_Clicked"
             Style="{StaticResource btnNew}" />
 
