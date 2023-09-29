@@ -699,3 +699,16 @@ S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\yellow_not_check.scale-150.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\yellow_not_check.scale-200.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\yellow_not_check.scale-400.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\System.Speech.dll
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\edit_white_icon.scale-100.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\edit_white_icon.scale-125.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\edit_white_icon.scale-150.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\edit_white_icon.scale-200.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\edit_white_icon.scale-400.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\task_white_icon.scale-100.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\task_white_icon.scale-125.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\task_white_icon.scale-150.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\task_white_icon.scale-200.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\task_white_icon.scale-400.png

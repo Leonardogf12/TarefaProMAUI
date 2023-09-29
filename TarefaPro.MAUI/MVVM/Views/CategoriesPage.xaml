@@ -13,17 +13,32 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <ImageButton
-            Grid.Row="0"
-            Margin="15"
-            Clicked="AddCategory_Clicked"
-            HeightRequest="25"
-            HorizontalOptions="End"
-            IsVisible="{Binding HasCategories}"
-            Source="add_icon" />
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ImageButton
+                Grid.Column="0"
+                Clicked="RemoveAllCategories_Clicked"
+                HeightRequest="25"
+                HorizontalOptions="Start"
+                IsVisible="{Binding HasCategories}"
+                Source="dotnet_bot" />
+            <ImageButton
+                Grid.Column="2"
+                Margin="15"
+                Clicked="AddCategory_Clicked"
+                HeightRequest="25"
+                HorizontalOptions="EndAndExpand"
+                IsVisible="{Binding HasCategories}"
+                Source="add_icon" />
+        </Grid>
+
 
         <Label
             Grid.Row="1"
@@ -49,23 +64,44 @@
         </Border>
 
         <ImageButton
-            Grid.Row="3"
+            Grid.Row="4"
+            Clicked="AddCategory_Clicked"
             HeightRequest="25"
             IsVisible="{Binding HasNotCategories}"
             Source="add_icon"
             VerticalOptions="Center" />
 
-        <Grid Grid.Row="3" IsVisible="{Binding HasCategories}">
+        <Grid
+            Grid.Row="3"
+            ColumnSpacing="5"
+            HorizontalOptions="End">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Column="0"
+                Text="Total:"
+                TextColor="{StaticResource Gray400}"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Column="1"
+                Text="{Binding TotalCategories}"
+                TextColor="{StaticResource Gray400}"
+                VerticalOptions="Center" />
+        </Grid>
+
+        <Grid Grid.Row="4" IsVisible="{Binding HasCategories}">
+
             <CollectionView HorizontalOptions="Center" ItemsSource="{Binding CategoriesCollection}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame
                             Margin="0,15,0,0"
-                            BackgroundColor="{Binding ColorName}"
+                            BackgroundColor="{Binding Color, Converter={StaticResource StringToColorConverter}}"
                             BorderColor="Transparent"
                             CornerRadius="20"
                             HeightRequest="110">
-
                             <Grid Margin="-20">
 
                                 <Grid.RowDefinitions>
@@ -80,7 +116,11 @@
                                     HeightRequest="30"
                                     HorizontalOptions="End"
                                     Source="actions_icon"
-                                    VerticalOptions="Start" />
+                                    VerticalOptions="Start">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="PopupActions_TapGesture" />
+                                    </Image.GestureRecognizers>
+                                </Image>
 
                                 <Label
                                     Grid.Row="1"

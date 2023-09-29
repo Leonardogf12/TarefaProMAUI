@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "d+FZujh2kVUwD81IjL8eRCXVxgzIYlPCPjtljQeo/cTJQCi/SmygK/nynAmKsoUQyF1XdjhNth3uFOcEpe285g==",
+  "dgSpecHash": "vM7kI3dlvqt8pDS5m8A3PWRliYLFaJmtJPOIfRA75J+i+yjc027r6NeWpab48BcZCBA0ODEuDeSin2A6FGQFeA==",
   "success": true,
   "projectFilePath": "S:\\PROJETOS\\Projetos MAUI\\TarefaPro.MAUI\\TarefaProMAUI\\TarefaPro.MAUI\\TarefaPro.MAUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\root\\.nuget\\packages\\communitytoolkit.maui\\5.2.0\\communitytoolkit.maui.5.2.0.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\communitytoolkit.maui.core\\5.2.0\\communitytoolkit.maui.core.5.2.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
@@ -85,6 +87,7 @@
     "C:\\Users\\root\\.nuget\\packages\\system.runtime.interopservices\\4.1.0\\system.runtime.interopservices.4.1.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\system.runtime.serialization.primitives\\4.1.1\\system.runtime.serialization.primitives.4.1.1.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\system.speech\\7.0.0\\system.speech.7.0.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\system.text.encoding.extensions\\4.0.11\\system.text.encoding.extensions.4.0.11.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\system.text.regularexpressions\\4.1.0\\system.text.regularexpressions.4.1.0.nupkg.sha512",

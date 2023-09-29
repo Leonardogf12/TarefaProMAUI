@@ -607,3 +607,11 @@ S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\yellow_not_check.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\yellow_not_check@2x.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\yellow_not_check@3x.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\bin\Debug\net7.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\bin\Debug\net7.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\edit_white_icon.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\edit_white_icon@2x.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\edit_white_icon@3x.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\task_white_icon.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\task_white_icon@2x.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\task_white_icon@3x.png

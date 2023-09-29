@@ -1,10 +1,14 @@
 ﻿using System.Collections.ObjectModel;
 using TarefaPro.MAUI.MVVM.Models;
+using TarefaPro.MAUI.Repositories.Category;
 
 namespace TarefaPro.MAUI.MVVM.ViewModels
 {
     public class CategoriesViewModel : BaseViewModel
     {
+
+        private readonly CategoryRepository _categoryRepository;
+
         private ObservableCollection<CategoryModel> _categoriesCollection = new();
         public ObservableCollection<CategoryModel> CategoriesCollection
         {
@@ -33,114 +37,48 @@ namespace TarefaPro.MAUI.MVVM.ViewModels
             set => SetProperty(ref _hasNotCategories, value);
 
         }
-    
+
+
+        private int _totalCategories;
+        public int TotalCategories
+        {
+            get => _totalCategories;
+            set=>SetProperty(ref _totalCategories, value);
+        }
 
 
         public CategoriesViewModel()
         {
-            PreencheList();
-            CheckIfHasCategories();
+            _categoryRepository = new CategoryRepository();           
         }
 
-
-        private void PreencheList()
+        public async Task LoadCategories()
         {
-           // Application.Current.Resources.TryGetValue("PrimarySalmon", out var labelStyle);
+            CategoriesCollection.Clear();
 
-            var list = new List<CategoryModel>
-           {
-               new CategoryModel
-               {
-                   Id = 1,
-                   Name = "Foo",
-                   Description =  "Bar",
-                   
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-                  
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-                  
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-               new CategoryModel
-               {
-                   Id = 2,
-                   Name = "Too",
-                   Description =  "Ber",
-               },
-           };
-           
-            list.ForEach(x =>
-            {               
-                CategoriesCollection.Add(x);
-            });
+            var categories = await _categoryRepository.GetAllAsync();
+
+            foreach (var x in categories) CategoriesCollection.Add(x);
+
+            TotalCategories = CategoriesCollection.Count;
         }
-
-        private void CheckIfHasCategories()
+        
+        public void CheckIfHasCategories()
         {
             HasCategories = CategoriesCollection.Count > 0 ? true : false;
+        }
+
+        public async void OnAppearing()
+        {
+            await LoadCategories();
+           CheckIfHasCategories();
+        }
+
+        public async void RemoveAllCategories()
+        {
+            _ = await _categoryRepository.DeleteAllAsync();
+
+            await LoadCategories();
         }
     }
 }

@@ -43,9 +43,11 @@
                 <RoundRectangle CornerRadius="10" />
             </Border.StrokeShape>
             <Entry
+                x:Name="entryName"
                 Grid.Column="1"
                 Placeholder="Nome"
-                Style="{StaticResource entryForm}" />
+                Style="{StaticResource entryForm}"
+                Text="{Binding Name}" />
         </Border>
 
         <Border
@@ -58,9 +60,11 @@
                 <RoundRectangle CornerRadius="10" />
             </Border.StrokeShape>
             <Editor
+                x:Name="entryDescription"
                 Grid.Column="1"
                 Placeholder="Descrição"
-                Style="{StaticResource entryForm}" />
+                Style="{StaticResource entryForm}"
+                Text="{Binding Description}" />
         </Border>
 
         <Grid

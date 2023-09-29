@@ -1,8 +1,14 @@
-﻿namespace TarefaPro.MAUI.MVVM.ViewModels
+﻿using TarefaPro.MAUI.MVVM.Models;
+using TarefaPro.MAUI.Repositories.Category;
+
+namespace TarefaPro.MAUI.MVVM.ViewModels
 {
 
     public class AddCategoryViewModel : BaseViewModel
     {
+        private readonly CategoryRepository _categoryRepository;
+
+
         #region Properts
 
         private bool _isGreenSelected;
@@ -154,10 +160,37 @@
 
         }
 
+
+        private string _name;
+        public string Name
+        {
+            get => _name;
+            set => SetProperty(ref _name, value);
+        }
+
+
+        private string _description;
+        public string Description
+        {
+            get => _description;
+            set => SetProperty(ref _description, value);
+        }
+
+
+        private string _colorFrame;
+        public string ColorFrame
+        {
+            get => _colorFrame;
+            set => SetProperty(ref _colorFrame, value);
+        }
+
+
         #endregion
 
         public AddCategoryViewModel()
         {
+            _categoryRepository = new CategoryRepository();
+
             GetDefaultLayoutSettings();
         }
 
@@ -176,6 +209,35 @@
             IsYellowSelected = false;
             IsOrangeSelected = false;
         }
-     
+
+        public async Task AddCategory()
+        {
+            IsBusy = true;
+
+            var category = new CategoryModel
+            {
+                Name = Name,
+                Description = Description,
+                Color = ColorFrame,
+            };
+
+            try
+            {
+                var result = await _categoryRepository.SaveAsync(category);
+
+                if (result > 0)
+                    await App.Current.MainPage.DisplayAlert("Categoria", "Categoria salva com sucesso.", "OK");              
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                await App.Current.MainPage.DisplayAlert("Categoria", "Ocorreu um erro durante o registro da categoria.", "OK");
+                throw;
+            }
+            finally
+            {
+                IsBusy = false;
+            }                              
+        }
     }
 }

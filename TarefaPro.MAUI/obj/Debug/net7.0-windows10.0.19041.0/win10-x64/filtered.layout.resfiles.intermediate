@@ -84,6 +84,11 @@ edit_icon.scale-125.png
 edit_icon.scale-150.png
 edit_icon.scale-200.png
 edit_icon.scale-400.png
+edit_white_icon.scale-100.png
+edit_white_icon.scale-125.png
+edit_white_icon.scale-150.png
+edit_white_icon.scale-200.png
+edit_white_icon.scale-400.png
 goback_icon.scale-100.png
 goback_icon.scale-125.png
 goback_icon.scale-150.png
@@ -134,6 +139,11 @@ task_icon.scale-125.png
 task_icon.scale-150.png
 task_icon.scale-200.png
 task_icon.scale-400.png
+task_white_icon.scale-100.png
+task_white_icon.scale-125.png
+task_white_icon.scale-150.png
+task_white_icon.scale-200.png
+task_white_icon.scale-400.png
 yellow_check.scale-100.png
 yellow_check.scale-125.png
 yellow_check.scale-150.png

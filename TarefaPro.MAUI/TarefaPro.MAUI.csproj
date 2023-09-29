@@ -58,6 +58,7 @@
 	  <None Remove="Resources\Images\blue_not_check.svg" />
 	  <None Remove="Resources\Images\calendar_icon.svg" />
 	  <None Remove="Resources\Images\edit_icon.svg" />
+	  <None Remove="Resources\Images\edit_white_icon.svg" />
 	  <None Remove="Resources\Images\goback_icon.svg" />
 	  <None Remove="Resources\Images\green_check.svg" />
 	  <None Remove="Resources\Images\green_not_check.svg" />
@@ -68,6 +69,7 @@
 	  <None Remove="Resources\Images\salmon_not_check.svg" />
 	  <None Remove="Resources\Images\search_icon.svg" />
 	  <None Remove="Resources\Images\task_icon.svg" />
+	  <None Remove="Resources\Images\task_white_icon.svg" />
 	  <None Remove="Resources\Images\yellow_check.svg" />
 	  <None Remove="Resources\Images\yellow_not_check.svg" />
 	</ItemGroup>
@@ -80,6 +82,7 @@
 		<PackageReference Include="SQLitePCLRaw.core" Version="2.1.5" />
 		<PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.5" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.5" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />		
 	</ItemGroup>
 
 	<ItemGroup>
@@ -99,7 +102,7 @@
 	  <MauiXaml Update="MVVM\Views\CategoriesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\Components\Common\SearchBarComponent.xaml">
+	  <MauiXaml Update="MVVM\Views\Components\Common\PopupCategoriesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

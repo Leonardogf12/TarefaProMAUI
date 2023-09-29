@@ -40,11 +40,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CategoriesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CategoriesPage.xaml
 
-[S:/PROJETOS/Projetos MAUI/TarefaPro.MAUI/TarefaProMAUI/TarefaPro.MAUI/MVVM/Views/Components/Common/SearchBarComponent.xaml]
+[S:/PROJETOS/Projetos MAUI/TarefaPro.MAUI/TarefaProMAUI/TarefaPro.MAUI/MVVM/Views/Components/Common/PopupCategoriesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.Components.Common.SearchBarComponent.xaml
-build_metadata.AdditionalFiles.TargetPath = MVVM\Views\Components\Common\SearchBarComponent.xaml
-build_metadata.AdditionalFiles.RelativePath = MVVM\Views\Components\Common\SearchBarComponent.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.Components.Common.PopupCategoriesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\Components\Common\PopupCategoriesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\Components\Common\PopupCategoriesPage.xaml
 
 [S:/PROJETOS/Projetos MAUI/TarefaPro.MAUI/TarefaProMAUI/TarefaPro.MAUI/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

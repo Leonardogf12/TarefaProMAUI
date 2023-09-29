@@ -158,3 +158,17 @@ Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
 SQLitePCLRaw.lib.e_sqlite3.android.aar
 Xamarin.Google.Crypto.Tink.Android.aar
+CommunityToolkit.Maui.Core.dll
+CommunityToolkit.Maui.dll
+HarfBuzzSharp.dll
+Material.Components.Maui.dll
+SkiaSharp.dll
+SkiaSharp.Views.Android.dll
+SkiaSharp.Views.Maui.Controls.dll
+SkiaSharp.Views.Maui.Core.dll
+CommunityToolkit.Maui.Core.aar
+CommunityToolkit.Maui.aar
+Material.Components.Maui.aar
+SkiaSharp.Extended.UI.dll
+SkiaSharp.SceneGraph.dll
+SkiaSharp.Skottie.dll
