@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TarefaPro.MAUI.MVVM.Views.Category.AddCategoryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource BackgroudDefault}"
+    Shell.NavBarIsVisible="False">
+
+    <Grid Margin="20,0,20,0" RowSpacing="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+
+        </Grid.RowDefinitions>
+
+        <ImageButton
+            Grid.Row="0"
+            Margin="0,15,0,0"
+            Clicked="Back_Clicked"
+            HeightRequest="20"
+            HorizontalOptions="Start"
+            IsVisible="{Binding HasCategories}"
+            Source="goback_icon" />
+
+        <Label
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            Style="{StaticResource lblTitle}"
+            Text="Nova Categoria" />
+
+        <Border
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            StrokeThickness="0"
+            Style="{StaticResource borderForm}">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Entry
+                x:Name="entryName"
+                Grid.Column="1"
+                Placeholder="Nome"
+                Style="{StaticResource entryForm}"
+                Text="{Binding Name}" />
+        </Border>
+
+        <Border
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            HeightRequest="120"
+            StrokeThickness="0"
+            Style="{StaticResource borderForm}">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Editor
+                x:Name="entryDescription"
+                Grid.Column="1"
+                Placeholder="Descrição"
+                Style="{StaticResource entryForm}"
+                Text="{Binding Description}" />
+        </Border>
+
+        <Grid
+            Grid.Row="4"
+            ColumnSpacing="30"
+            RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="4"
+                Style="{StaticResource lblSecondary}"
+                Text="Selecione a Cor" />
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                HeightRequest="40"
+                Source="{Binding GreenCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checkgreen_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="1"
+                HeightRequest="40"
+                Source="{Binding BlueCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checkblue_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="2"
+                HeightRequest="40"
+                Source="{Binding SalmonCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checksalmon_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="3"
+                HeightRequest="40"
+                Source="{Binding YellowCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checkyellow_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="1"
+                Grid.Column="4"
+                HeightRequest="40"
+                Source="{Binding OrangeCheckImageSource}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="checkorange_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Grid>
+
+        <Button
+            Grid.Row="5"
+            BackgroundColor="{Binding BackgroundColorButtonNew}"
+            Clicked="AddCategory_Clicked"
+            Style="{StaticResource btnNew}" />
+
+    </Grid>
+</ContentPage>

@@ -86,23 +86,26 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Services\" />
+	  <Folder Include="Helpers\Components\Common\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MVVM\Views\CategoriesPage.xaml.cs">
+	  <Compile Update="MVVM\Views\Category\CategoriesPage.xaml.cs">
 	    <DependentUpon>CategoriesPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="MVVM\Views\AddCategoryPage.xaml">
+	  <MauiXaml Update="MVVM\Views\Category\AddCategoryPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\CategoriesPage.xaml">
+	  <MauiXaml Update="MVVM\Views\Category\CategoriesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\Components\Common\PopupCategoriesPage.xaml">
+	  <MauiXaml Update="MVVM\Views\Category\EditCategoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\Components\Category\PopupCategoriesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

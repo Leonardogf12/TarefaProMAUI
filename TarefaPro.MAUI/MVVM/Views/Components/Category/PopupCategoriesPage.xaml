@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="TarefaPro.MAUI.MVVM.Views.Components.Category.PopupCategoriesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Color="Transparent">
+    <VerticalStackLayout VerticalOptions="Center">
+        <Frame
+            BackgroundColor="White"
+            BorderColor="White"
+            CornerRadius="30"
+            HasShadow="True"
+            HeightRequest="170"
+            WidthRequest="160">
+            <Grid HorizontalOptions="FillAndExpand" RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    FontFamily="MontserratSemiBold"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    Text="Ações" />
+                <Border
+                    Grid.Row="1"
+                    BackgroundColor="{StaticResource PrimaryBlue}"
+                    HeightRequest="40"
+                    StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="35" />
+                    </Border.StrokeShape>
+
+                    <Grid
+                        Margin="10,0,0,0"
+                        ColumnSpacing="10"
+                        HorizontalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="18"
+                            Source="edit_white_icon" />
+                        <Label
+                            Grid.Column="1"
+                            FontFamily="MontserratRegular"
+                            FontSize="16"
+                            Text="Editar"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </Grid>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding FirstCommand}" />
+                    </Border.GestureRecognizers>
+                </Border>
+
+                <Border
+                    Grid.Row="2"
+                    BackgroundColor="{StaticResource PrimaryGreen}"
+                    HeightRequest="40"
+                    StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30" />
+                    </Border.StrokeShape>
+                    <Grid
+                        Margin="10,0,0,0"
+                        ColumnSpacing="10"
+                        HorizontalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="18"
+                            Source="task_white_icon" />
+                        <Label
+                            Grid.Column="1"
+                            FontFamily="MontserratRegular"
+                            FontSize="16"
+                            Text="Tarefas"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </Grid>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SecondCommand}" />
+                    </Border.GestureRecognizers>
+                </Border>
+
+            </Grid>
+        </Frame>
+    </VerticalStackLayout>
+</toolkit:Popup>

@@ -1,3 +1,5 @@
+CommunityToolkit.Maui.Core.dll
+CommunityToolkit.Maui.dll
 GoogleGson.dll
 Microsoft.Maui.Controls.Compatibility.dll
 Microsoft.Maui.Controls.dll
@@ -150,6 +152,8 @@ androidx.exifinterface.exifinterface.aar
 androidx.browser.browser.aar
 gifdecoder.aar
 glide.aar
+CommunityToolkit.Maui.Core.aar
+CommunityToolkit.Maui.aar
 GoogleGson.aar
 Microsoft.Maui.Controls.aar
 Microsoft.Maui.Controls.Compatibility.aar
@@ -158,17 +162,3 @@ Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
 SQLitePCLRaw.lib.e_sqlite3.android.aar
 Xamarin.Google.Crypto.Tink.Android.aar
-CommunityToolkit.Maui.Core.dll
-CommunityToolkit.Maui.dll
-HarfBuzzSharp.dll
-Material.Components.Maui.dll
-SkiaSharp.dll
-SkiaSharp.Views.Android.dll
-SkiaSharp.Views.Maui.Controls.dll
-SkiaSharp.Views.Maui.Core.dll
-CommunityToolkit.Maui.Core.aar
-CommunityToolkit.Maui.aar
-Material.Components.Maui.aar
-SkiaSharp.Extended.UI.dll
-SkiaSharp.SceneGraph.dll
-SkiaSharp.Skottie.dll

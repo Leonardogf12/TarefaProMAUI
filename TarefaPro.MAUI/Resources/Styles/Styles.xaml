@@ -471,6 +471,14 @@
 
     </Style>
 
+    <Style x:Key="btnEdit" TargetType="Button">
+        <Setter Property="FontFamily" Value="MontserratSemiBold" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="Text" Value="Salvar" />
+        <Setter Property="HeightRequest" Value="45" />
+    </Style>
+
 
     <!--  Converters  -->
     <converter:StringToColorConverter x:Key="StringToColorConverter" />
