@@ -5,179 +5,186 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     BackgroundColor="{StaticResource BackgroudDefault}"
     Shell.NavBarIsVisible="False">
+    <ScrollView VerticalOptions="FillAndExpand">
+        <VerticalStackLayout>
 
-    <Grid Margin="20,0,20,0" RowSpacing="10">
+            <Grid Margin="20,0,20,0" RowSpacing="10">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="70" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="150" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="30" />
-        </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="80" />
 
-        <ImageButton
-            Grid.Row="0"
-            Margin="0,15,0,0"
-            Clicked="Back_Clicked"
-            HeightRequest="20"
-            HorizontalOptions="Start"
-            Source="goback_icon" />
+                </Grid.RowDefinitions>
 
-        <Label
-            Grid.Row="0"
-            Margin="10,25"
-            FontFamily="MontserratRegular"
-            FontSize="Medium"
-            HorizontalOptions="End"
-            Text="Add"
-            TextColor="Black">
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="AddTask_Tapped" />
-            </Label.GestureRecognizers>
-        </Label>
+                <ImageButton
+                    Grid.Row="0"
+                    Margin="0,15,0,0"
+                    Clicked="Back_Clicked"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="goback_icon" />
 
-        <Label
-            Grid.Row="1"
-            Grid.ColumnSpan="2"
-            HorizontalOptions="Start"
-            Style="{StaticResource lblTitle}"
-            Text="Nova Tarefa" />
+                <Label
+                    Grid.Row="0"
+                    Margin="10,25"
+                    FontFamily="MontserratRegular"
+                    FontSize="Medium"
+                    HorizontalOptions="End"
+                    Text="Add"
+                    TextColor="Black">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AddTask_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
 
-        <Label
-            Grid.Row="2"
-            Grid.ColumnSpan="2"
-            FontFamily="MontserratSemiBold"
-            FontSize="Medium"
-            HorizontalOptions="Start"
-            Text="Financas"
-            TextColor="Gray" />
+                <Label
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource lblTitle}"
+                    Text="Nova Tarefa" />
 
-        <Border
-            Grid.Row="3"
-            Grid.ColumnSpan="2"
-            StrokeThickness="0"
-            Style="{StaticResource borderForm}">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <Entry
-                x:Name="entryName"
-                Grid.Column="1"
-                Placeholder="Nome"
-                Style="{StaticResource entryForm}"
-                Text="{Binding Name}" />
-        </Border>
+                <Label
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    FontFamily="MontserratSemiBold"
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    Text="Financas"
+                    TextColor="Gray" />
 
-        <Border
-            Grid.Row="4"
-            Grid.ColumnSpan="2"
-            HeightRequest="120"
-            StrokeThickness="0"
-            Style="{StaticResource borderForm}">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <Editor
-                x:Name="entryDescription"
-                Grid.Column="1"
-                Placeholder="Descrição"
-                Style="{StaticResource entryForm}"
-                Text="{Binding Description}" />
-        </Border>
+                <Border
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    StrokeThickness="0"
+                    Style="{StaticResource borderForm}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <Entry
+                        x:Name="entryName"
+                        Grid.Column="1"
+                        Placeholder="Nome"
+                        Style="{StaticResource entryForm}"
+                        Text="{Binding Name}" />
+                </Border>
 
-        <Label
-            Grid.Row="5"
-            Grid.ColumnSpan="2"
-            FontFamily="MontserratRegular"
-            FontSize="Medium"
-            HorizontalOptions="Start"
-            Text="Data do Evento"
-            TextColor="Gray" />
-        <Border
-            Grid.Row="6"
-            Grid.ColumnSpan="2"
-            StrokeThickness="0"
-            Style="{StaticResource borderForm}">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <DatePicker
-                x:Name="entryEventDate"
-                Grid.Column="1"
-                Style="{StaticResource entryForm}" />
-        </Border>
+                <Border
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    HeightRequest="120"
+                    StrokeThickness="0"
+                    Style="{StaticResource borderForm}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <Editor
+                        x:Name="entryDescription"
+                        Grid.Column="1"
+                        Placeholder="Descrição"
+                        Style="{StaticResource entryForm}"
+                        Text="{Binding Description}" />
+                </Border>
 
-        <StackLayout
-            Grid.Row="7"
-            Padding="-5,0,0,0"
-            Orientation="Horizontal"
-            Spacing="10">
-            <Switch
-                IsToggled="false"
-                OnColor="LightSlateGray"
-                ThumbColor="CadetBlue" />
+                <Label
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    FontFamily="MontserratRegular"
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    Text="Data do Evento"
+                    TextColor="Gray" />
+                <Border
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    StrokeThickness="0"
+                    Style="{StaticResource borderForm}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <DatePicker
+                        x:Name="entryEventDate"
+                        Grid.Column="1"
+                        Style="{StaticResource entryForm}" />
+                </Border>
 
-            <Label
-                Grid.Row="7"
-                Grid.ColumnSpan="2"
-                FontFamily="MontserratRegular"
-                FontSize="Medium"
-                Text="Ativar Lembrete?"
-                TextColor="Gray"
-                VerticalOptions="Center" />
-        </StackLayout>
+                <StackLayout
+                    Grid.Row="7"
+                    Padding="-5,0,0,0"
+                    Orientation="Horizontal"
+                    Spacing="10">
+                    <Switch
+                        IsToggled="false"
+                        OnColor="LightSlateGray"
+                        ThumbColor="CadetBlue" />
+
+                    <Label
+                        Grid.Row="7"
+                        Grid.ColumnSpan="2"
+                        FontFamily="MontserratRegular"
+                        FontSize="Medium"
+                        Text="Ativar Lembrete?"
+                        TextColor="Gray"
+                        VerticalOptions="Center" />
+                </StackLayout>
 
 
-        <Label
-            Grid.Row="8"
-            Grid.ColumnSpan="2"
-            FontFamily="MontserratRegular"
-            FontSize="Medium"
-            HorizontalOptions="Start"
-            Text="Data do Lembrete"
-            TextColor="Gray" />
-        <Border
-            Grid.Row="9"
-            Grid.ColumnSpan="2"
-            StrokeThickness="0"
-            Style="{StaticResource borderForm}">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <DatePicker
-                x:Name="entryNotifyDate"
-                Grid.Column="1"
-                Style="{StaticResource entryForm}" />
-        </Border>
-        <Label
-            Grid.Row="10"
-            Grid.ColumnSpan="2"
-            FontFamily="MontserratRegular"
-            FontSize="Medium"
-            HorizontalOptions="Start"
-            Text="Hora do Lembrete"
-            TextColor="Gray" />
-        <Border
-            Grid.Row="11"
-            Grid.ColumnSpan="2"
-            StrokeThickness="0"
-            Style="{StaticResource borderForm}">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <TimePicker
-                x:Name="entryNotifyHour"
-                Grid.Column="1"
-                Style="{StaticResource entryForm}" />
-        </Border>
+                <Label
+                    Grid.Row="8"
+                    Grid.ColumnSpan="2"
+                    FontFamily="MontserratRegular"
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    Text="Data do Lembrete"
+                    TextColor="Gray" />
+                <Border
+                    Grid.Row="9"
+                    Grid.ColumnSpan="2"
+                    StrokeThickness="0"
+                    Style="{StaticResource borderForm}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <DatePicker
+                        x:Name="entryNotifyDate"
+                        Grid.Column="1"
+                        Style="{StaticResource entryForm}" />
+                </Border>
+                <Label
+                    Grid.Row="10"
+                    Grid.ColumnSpan="2"
+                    FontFamily="MontserratRegular"
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    Text="Hora do Lembrete"
+                    TextColor="Gray" />
+                <Border
+                    Grid.Row="11"
+                    Grid.ColumnSpan="2"
+                    StrokeThickness="0"
+                    Style="{StaticResource borderForm}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <TimePicker
+                        x:Name="entryNotifyHour"
+                        Grid.Column="1"
+                        Style="{StaticResource entryForm}" />
+                </Border>
 
-    </Grid>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
