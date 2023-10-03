@@ -1,4 +1,5 @@
 ﻿using TarefaPro.MAUI.MVVM.Views.Category;
+using TarefaPro.MAUI.MVVM.Views.Tasks;
 
 namespace TarefaPro.MAUI
 {
@@ -9,6 +10,10 @@ namespace TarefaPro.MAUI
             InitializeComponent();
             
             Routing.RegisterRoute(nameof(EditCategoryPage), typeof(EditCategoryPage));
+            Routing.RegisterRoute(nameof(TaskiesPage), typeof(TaskiesPage));
+            Routing.RegisterRoute(nameof(AddTaskPage), typeof(AddTaskPage));
+
+
         }
     }
 }

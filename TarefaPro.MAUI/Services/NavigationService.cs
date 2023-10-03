@@ -3,12 +3,12 @@
 namespace TarefaPro.MAUI.Services
 {
     public class NavigationService : INavigationService
-    {       
+    {
         ScaleUpScaleDownHelper _scaleDownHelper = new();
 
         public bool IsBrowsing = false;
 
-        public async Task NavigationToPageAsync<T>(Dictionary<string, object> parameters = null,
+        public async Task NavigationToPageAsync<T>(Dictionary<string, object> parameters,
                                                    View component = null) where T : IView
         {
             if (IsBrowsing) return;
@@ -17,7 +17,11 @@ namespace TarefaPro.MAUI.Services
 
             var typeView = typeof(T);
 
-            await Shell.Current.GoToAsync($"{typeView.Name}", parameters);
+
+            if (parameters != null)
+                await Shell.Current.GoToAsync($"{typeView.Name}", parameters);
+            else
+                await Shell.Current.GoToAsync($"{typeView.Name}");
 
             IsBrowsing = false;
         }

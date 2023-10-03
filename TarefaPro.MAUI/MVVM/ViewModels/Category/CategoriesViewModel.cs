@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using TarefaPro.MAUI.MVVM.Models;
 using TarefaPro.MAUI.MVVM.Views.Category;
 using TarefaPro.MAUI.MVVM.Views.Components.Category;
+using TarefaPro.MAUI.MVVM.Views.Tasks;
 using TarefaPro.MAUI.Repositories.Category;
 using TarefaPro.MAUI.Services;
 
@@ -138,11 +139,16 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
         public void OpenPopupActions() => PopupCategory.SetParametersOnPopup(EditCategoryCommand, TaskOfCategoryCommand);       
 
-        private void OnTaskOfCategoryCommand()
-        {
-            //TODO Implementing...
-
+        private async void OnTaskOfCategoryCommand()
+        {          
             Popup.Close();
+            
+            Dictionary<string, object> Parameters = new Dictionary<string, object>
+            {
+                { "CategorySelected", SelectedCategory }
+            };
+
+            await _navigationService.NavigationToPageAsync<TaskiesPage>(parameters: Parameters);
         }
 
         private async  void OnEditCategoryCommand()
