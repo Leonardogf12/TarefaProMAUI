@@ -32,13 +32,12 @@ namespace TarefaPro.MAUI
             builder.Services.AddTransient<TaskiesPage>();
             builder.Services.AddTransient<AddTaskPage>();
 
-
             builder.Services.AddTransient<CategoriesViewModel>();
             builder.Services.AddTransient<AddCategoryViewModel>();
             builder.Services.AddTransient<EditCategoryViewModel>();
             builder.Services.AddTransient<PopupCategoriesViewModel>();
             builder.Services.AddTransient<TaskiesViewModel>();
-
+            builder.Services.AddTransient<AddTaskViewModel>();
 
             builder.Services.AddSingleton<INavigationService, NavigationService>();
 

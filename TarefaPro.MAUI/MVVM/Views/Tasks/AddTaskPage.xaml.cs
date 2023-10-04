@@ -12,15 +12,53 @@ public partial class AddTaskPage : ContentPage
 	}
 
     private async void Back_Clicked(object sender, EventArgs e)=> await Navigation.PopAsync();
-       
-
-    private void AddCategory_Clicked(object sender, EventArgs e)
+      
+    private async void AddTask_Tapped(object sender, TappedEventArgs e)
     {
+        var vm = BindingContext as AddTaskViewModel;
 
+        var validate = await ValidateTaskToNextStep();
+
+        if (validate)
+        {
+            vm.TaskName = entryName.Text;
+            vm.TaskDescription = entryDescription.Text;
+
+            await vm.AddTask();
+        }
     }
 
-    private void AddTask_Tapped(object sender, TappedEventArgs e)
+    private async Task<bool> ValidateTaskToNextStep()
     {
+        if (string.IsNullOrEmpty(entryName.Text))
+        {
+            await DisplayAlert("Ops", "Campo Nome é obrigatório.", "OK");
+            return false;
+        }
 
+        if (string.IsNullOrEmpty(entryDescription.Text))
+        {
+            await DisplayAlert("Ops", "Campo Descrição é obrigatório.", "OK");
+            return false;
+        }      
+
+        return true;
+    }
+
+    private void ActiveNotify_Toogled(object sender, ToggledEventArgs e)
+    {
+        var vm = BindingContext as AddTaskViewModel;
+
+        var component = (Switch)sender;
+
+        vm.IsEnabledReminder = component.IsToggled;
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        var vm = BindingContext as AddTaskViewModel;
+
+        vm.OnAppearing();
     }
 }

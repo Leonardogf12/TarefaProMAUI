@@ -61,7 +61,7 @@
                     FontFamily="MontserratSemiBold"
                     FontSize="Medium"
                     HorizontalOptions="Start"
-                    Text="Financas"
+                    Text="{Binding CategorySelectedToTask.Name}"
                     TextColor="Gray" />
 
                 <Border
@@ -77,7 +77,7 @@
                         Grid.Column="1"
                         Placeholder="Nome"
                         Style="{StaticResource entryForm}"
-                        Text="{Binding Name}" />
+                        Text="{Binding TaskName}" />
                 </Border>
 
                 <Border
@@ -94,7 +94,7 @@
                         Grid.Column="1"
                         Placeholder="Descrição"
                         Style="{StaticResource entryForm}"
-                        Text="{Binding Description}" />
+                        Text="{Binding TaskDescription}" />
                 </Border>
 
                 <Label
@@ -116,6 +116,9 @@
                     <DatePicker
                         x:Name="entryEventDate"
                         Grid.Column="1"
+                        Date="{Binding DateEvent}"
+                        MaximumDate="{Binding MaxDateEvent}"
+                        MinimumDate="{Binding MinDateEvent}"
                         Style="{StaticResource entryForm}" />
                 </Border>
 
@@ -127,7 +130,8 @@
                     <Switch
                         IsToggled="false"
                         OnColor="LightSlateGray"
-                        ThumbColor="CadetBlue" />
+                        ThumbColor="CadetBlue"
+                        Toggled="ActiveNotify_Toogled" />
 
                     <Label
                         Grid.Row="7"
@@ -159,6 +163,10 @@
                     <DatePicker
                         x:Name="entryNotifyDate"
                         Grid.Column="1"
+                        Date="{Binding DateReminde}"
+                        IsEnabled="{Binding IsEnabledReminder}"
+                        MaximumDate="{Binding MaxDateReminde}"
+                        MinimumDate="{Binding MinDateReminde}"
                         Style="{StaticResource entryForm}" />
                 </Border>
                 <Label
@@ -180,7 +188,9 @@
                     <TimePicker
                         x:Name="entryNotifyHour"
                         Grid.Column="1"
-                        Style="{StaticResource entryForm}" />
+                        IsEnabled="{Binding IsEnabledReminder}"
+                        Style="{StaticResource entryForm}"
+                        Time="{Binding HourReminde}" />
                 </Border>
 
             </Grid>

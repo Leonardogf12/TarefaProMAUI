@@ -1,6 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using TarefaPro.MAUI.MVVM.Models;
+using TarefaPro.MAUI.MVVM.Views.Tasks;
 using TarefaPro.MAUI.Repositories.Tasks;
+using TarefaPro.MAUI.Services;
 
 namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 {
@@ -8,6 +10,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
     public class TaskiesViewModel : BaseViewModel
     {
         private readonly TaskRepository _taskRepository;
+
+        private readonly INavigationService _navigationService;
+
 
         private CategoryModel _categorySelected;
         public CategoryModel CategorySelected
@@ -52,9 +57,10 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         }
 
 
-        public TaskiesViewModel()
+        public TaskiesViewModel(INavigationService navigationService)
         {
             _taskRepository = new TaskRepository();
+            _navigationService = navigationService;
         }
 
 
@@ -73,9 +79,21 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
             var taskies = await _taskRepository.GetAllAsync();
 
-            foreach (var x in taskies) TaskiesCollection.Add(x);
+            var list = taskies.Where(x => x.CategoryId == CategorySelected.Id);
+
+            foreach (var x in list) TaskiesCollection.Add(x);
 
             TotalTaskies = TaskiesCollection.Count;
+        }
+
+        public async void GotoAddTaskPage()
+        {
+            Dictionary<string, object> Parameters = new Dictionary<string, object>
+            {
+                { "CategorySelectedToTask", CategorySelected }
+            };
+
+            await _navigationService.NavigationToPageAsync<AddTaskPage>(parameters: Parameters);
         }
     }
 }

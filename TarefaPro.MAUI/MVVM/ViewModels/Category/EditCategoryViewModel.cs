@@ -1,6 +1,7 @@
 ﻿using TarefaPro.MAUI.Controls;
 using TarefaPro.MAUI.MVVM.Models;
 using TarefaPro.MAUI.Repositories.Category;
+using TarefaPro.MAUI.Repositories.Tasks;
 
 namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 {
@@ -8,6 +9,8 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
     public class EditCategoryViewModel : BaseViewModel
     {
         private readonly CategoryRepository _categoryRepository;
+        private readonly TaskRepository _taskRepository;
+
 
 
         private CategoryModel _selectedCategory;
@@ -26,7 +29,8 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
         public EditCategoryViewModel()
         {
             _categoryRepository = new CategoryRepository();
-            
+            _taskRepository = new TaskRepository();
+
             GetDefaultLayoutSettings();            
         }
 
@@ -43,7 +47,11 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
                 var result = await _categoryRepository.UpdateAsync(newCategory);
 
                 if (result > 0)
-                    await App.Current.MainPage.DisplayAlert("Categoria", "Categoria editada com sucesso.", "OK");
+                {
+                    await EditTasksOfCategory();
+                    await App.Current.MainPage.DisplayAlert("Categoria", "Categoria editada com sucesso.", "OK");                   
+                }
+                    
             }
             catch (Exception ex)
             {
@@ -55,6 +63,17 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
                 IsBusy = false;
             }
 
+        }
+
+        private async Task EditTasksOfCategory()
+        {
+            var tasks = await _taskRepository.GetAllAsync();
+
+            foreach (var task in tasks.Where(x => x.CategoryId.Equals(SelectedCategory.Id)).ToList())
+            {
+                task.Color = ColorFrame;
+                await _taskRepository.UpdateAsync(task);
+            }            
         }
 
         private void SetLayoutPropertyOfCategorySelected()

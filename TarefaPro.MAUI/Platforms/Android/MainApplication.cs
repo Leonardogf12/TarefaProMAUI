@@ -22,7 +22,21 @@ namespace TarefaPro.MAUI
             {
                 h.PlatformView.BackgroundTintList =
                     Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
-            });          
+            });
+
+            //Remove DatePicker control underline
+            Microsoft.Maui.Handlers.DatePickerHandler.Mapper.AppendToMapping("NoUnderline", (h, v) =>
+            {
+                h.PlatformView.BackgroundTintList =
+                    Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
+            });
+
+            //Remove TimePicker control underline
+            Microsoft.Maui.Handlers.TimePickerHandler.Mapper.AppendToMapping("NoUnderline", (h, v) =>
+            {
+                h.PlatformView.BackgroundTintList =
+                    Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
+            });
         }
 
 

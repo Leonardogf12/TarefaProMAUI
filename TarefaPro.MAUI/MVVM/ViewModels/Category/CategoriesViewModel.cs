@@ -5,6 +5,7 @@ using TarefaPro.MAUI.MVVM.Views.Category;
 using TarefaPro.MAUI.MVVM.Views.Components.Category;
 using TarefaPro.MAUI.MVVM.Views.Tasks;
 using TarefaPro.MAUI.Repositories.Category;
+using TarefaPro.MAUI.Repositories.Tasks;
 using TarefaPro.MAUI.Services;
 
 namespace TarefaPro.MAUI.MVVM.ViewModels.Category
@@ -12,6 +13,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
     public class CategoriesViewModel : BaseViewModel
     {
         private readonly CategoryRepository _categoryRepository;
+
+        private readonly TaskRepository _taskRepository;
+
 
         private readonly INavigationService _navigationService;
 
@@ -74,6 +78,14 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
             set=> SetProperty(ref _hasSelectedCategory, value);
         }
 
+
+        private int _totalTaskiesOfCategory;
+        public int TotalTaskiesOfCategory
+        {
+            get => _totalTaskiesOfCategory;
+            set => SetProperty(ref _totalTaskiesOfCategory, value);   
+        }
+
         #endregion
 
         #region Commands
@@ -93,7 +105,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
            _navigationService = navigationService;
 
             _categoryRepository = new CategoryRepository();
-           
+
+            _taskRepository = new TaskRepository();
+
             SelectedCategoryCommand = new Command<CategoryModel>(OnSelectedCategoryCommand);
             EditCategoryCommand = new Command(OnEditCategoryCommand);
             TaskOfCategoryCommand = new Command(OnTaskOfCategoryCommand);
@@ -127,7 +141,20 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
         public async void OnAppearing()
         {
             await LoadCategories();
-           CheckIfHasCategories();
+            CheckIfHasCategories();
+            await GetCountTaskiesOfCategory();
+        }
+
+        private async Task GetCountTaskiesOfCategory()
+        {
+            var taskies = await _taskRepository.GetAllAsync();
+            var categories = CategoriesCollection.ToList();
+
+            var test = new List<TaskModel>();
+
+            test = taskies..Select(x=>x.CategoryId).Where(x=>x.)
+
+            TotalTaskiesOfCategory = 
         }
 
         public async void RemoveAllCategories()

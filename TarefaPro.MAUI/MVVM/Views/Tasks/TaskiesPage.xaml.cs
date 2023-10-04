@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using TarefaPro.MAUI.MVVM.ViewModels.Tasks;
 
 namespace TarefaPro.MAUI.MVVM.Views.Tasks;
@@ -22,7 +23,12 @@ public partial class TaskiesPage : ContentPage
 
     }
 
-    private async void AddTaskie_Clicked(object sender, EventArgs e) => await Navigation.PushAsync(new AddTaskPage());
+    private async void AddTaskie_Clicked(object sender, EventArgs e)
+    {
+      var vm = BindingContext as TaskiesViewModel;
+
+        vm.GotoAddTaskPage();
+    }
    
 
     private async void Back_Clicked(object sender, EventArgs e)
