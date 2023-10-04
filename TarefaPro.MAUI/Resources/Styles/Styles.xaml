@@ -413,7 +413,6 @@
     </Style>
 
     <Style x:Key="lblTitleFrameCategory" TargetType="Label">
-        <Setter Property="Margin" Value="20,0,0,0" />
         <Setter Property="VerticalOptions" Value="Start" />
         <Setter Property="FontFamily" Value="MontserratSemiBold" />
         <Setter Property="FontSize" Value="Large" />
@@ -421,9 +420,21 @@
     </Style>
 
     <Style x:Key="lblSubtitleFrameCategory" TargetType="Label">
-        <Setter Property="Margin" Value="20,-5,0,0" />
         <Setter Property="FontFamily" Value="MontserratRegular" />
         <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+    <Style x:Key="lblSubtitleFrameTask" TargetType="Label">
+        <Setter Property="FontFamily" Value="MontserratRegular" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+    <Style x:Key="lblTitleFrameTask" TargetType="Label">
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="FontFamily" Value="MontserratSemiBold" />
+        <Setter Property="FontSize" Value="Large" />
         <Setter Property="TextColor" Value="White" />
     </Style>
 

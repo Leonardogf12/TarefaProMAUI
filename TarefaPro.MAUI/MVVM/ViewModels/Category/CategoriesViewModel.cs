@@ -59,7 +59,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
         public int TotalCategories
         {
             get => _totalCategories;
-            set=>SetProperty(ref _totalCategories, value);
+            set => SetProperty(ref _totalCategories, value);
         }
 
 
@@ -67,7 +67,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
         private CategoryModel SelectedCategory
         {
             get => _selectedCategory;
-            set=>SetProperty( ref _selectedCategory, value);
+            set => SetProperty(ref _selectedCategory, value);
         }
 
 
@@ -75,7 +75,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
         public bool HasSelectedCategory
         {
             get => _hasSelectedCategory;
-            set=> SetProperty(ref _hasSelectedCategory, value);
+            set => SetProperty(ref _hasSelectedCategory, value);
         }
 
 
@@ -83,7 +83,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
         public int TotalTaskiesOfCategory
         {
             get => _totalTaskiesOfCategory;
-            set => SetProperty(ref _totalTaskiesOfCategory, value);   
+            set => SetProperty(ref _totalTaskiesOfCategory, value);
         }
 
         #endregion
@@ -100,9 +100,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
 
         public CategoriesViewModel(INavigationService navigationService)
-       
+
         {
-           _navigationService = navigationService;
+            _navigationService = navigationService;
 
             _categoryRepository = new CategoryRepository();
 
@@ -110,7 +110,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
             SelectedCategoryCommand = new Command<CategoryModel>(OnSelectedCategoryCommand);
             EditCategoryCommand = new Command(OnEditCategoryCommand);
-            TaskOfCategoryCommand = new Command(OnTaskOfCategoryCommand);
+            TaskOfCategoryCommand = new Command(OnTaskOfCategoryCommand);           
         }
 
 
@@ -133,29 +133,25 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
             foreach (var x in categories) CategoriesCollection.Add(x);
 
-            TotalCategories = CategoriesCollection.Count;          
+            TotalCategories = CategoriesCollection.Count;
+
+            var taskies = await _taskRepository.GetAllAsync();
+
+            foreach (var item in CategoriesCollection)
+            {
+                item.CountTaskies = taskies.Where(x => x.CategoryId.Equals(item.Id)).Count();
+                continue;
+            }
         }
-        
-        public void CheckIfHasCategories()=> HasCategories = CategoriesCollection.Count > 0 ? true : false;
-        
+
+        public void CheckIfHasCategories() => HasCategories = CategoriesCollection.Count > 0 ? true : false;
+
         public async void OnAppearing()
         {
             await LoadCategories();
-            CheckIfHasCategories();
-            await GetCountTaskiesOfCategory();
+            CheckIfHasCategories();           
         }
-
-        private async Task GetCountTaskiesOfCategory()
-        {
-            var taskies = await _taskRepository.GetAllAsync();
-            var categories = CategoriesCollection.ToList();
-
-            var test = new List<TaskModel>();
-
-            test = taskies..Select(x=>x.CategoryId).Where(x=>x.)
-
-            TotalTaskiesOfCategory = 
-        }
+       
 
         public async void RemoveAllCategories()
         {
@@ -164,12 +160,12 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
             OnAppearing();
         }
 
-        public void OpenPopupActions() => PopupCategory.SetParametersOnPopup(EditCategoryCommand, TaskOfCategoryCommand);       
+        public void OpenPopupActions() => PopupCategory.SetParametersOnPopup(EditCategoryCommand, TaskOfCategoryCommand);
 
         private async void OnTaskOfCategoryCommand()
-        {          
+        {
             Popup.Close();
-            
+
             Dictionary<string, object> Parameters = new Dictionary<string, object>
             {
                 { "CategorySelected", SelectedCategory }
@@ -178,8 +174,8 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
             await _navigationService.NavigationToPageAsync<TaskiesPage>(parameters: Parameters);
         }
 
-        private async  void OnEditCategoryCommand()
-        {            
+        private async void OnEditCategoryCommand()
+        {
             Popup.Close();
 
             Dictionary<string, object> Parameters = new Dictionary<string, object>
@@ -187,7 +183,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
                 { "SelectedCategory", SelectedCategory }
             };
 
-            await _navigationService.NavigationToPageAsync<EditCategoryPage>(Parameters);           
-        }      
+            await _navigationService.NavigationToPageAsync<EditCategoryPage>(Parameters);
+        }
     }
 }

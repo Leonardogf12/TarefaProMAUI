@@ -89,25 +89,12 @@
             Source="add_icon"
             VerticalOptions="Center" />
 
-        <Grid
+        <Label
             Grid.Row="4"
-            ColumnSpacing="5"
-            HorizontalOptions="End">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Label
-                Grid.Column="0"
-                Text="Total:"
-                TextColor="{StaticResource Gray400}"
-                VerticalOptions="Center" />
-            <Label
-                Grid.Column="1"
-                Text="{Binding TotalCategories}"
-                TextColor="{StaticResource Gray400}"
-                VerticalOptions="Center" />
-        </Grid>
+            HorizontalOptions="End"
+            Text="{Binding TotalTaskies, StringFormat='Total: {0}'}"
+            TextColor="{StaticResource Gray400}"
+            VerticalOptions="Center" />
 
         <Grid Grid.Row="5" IsVisible="{Binding HasTaskies}">
 
@@ -120,17 +107,34 @@
                             BorderColor="Transparent"
                             CornerRadius="20"
                             HeightRequest="110">
-                            <Grid Margin="-20">
-
+                            <Grid
+                                Margin="-10"
+                                ColumnSpacing="5"
+                                RowSpacing="0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
 
                                 <Image
                                     Grid.Row="0"
-                                    Margin="0,10,20,0"
+                                    Grid.Column="0"
+                                    HeightRequest="25"
+                                    HorizontalOptions="Start"
+                                    Source="dotnet_bot"
+                                    VerticalOptions="Start">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Image
+                                    Grid.Row="0"
+                                    Grid.Column="1"
                                     HeightRequest="30"
                                     HorizontalOptions="End"
                                     Source="actions_icon"
@@ -145,13 +149,25 @@
 
                                 <Label
                                     Grid.Row="1"
-                                    Style="{StaticResource lblTitleFrameCategory}"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    Style="{StaticResource lblTitleFrameTask}"
                                     Text="{Binding Name}" />
 
                                 <Label
                                     Grid.Row="2"
-                                    Style="{StaticResource lblSubtitleFrameCategory}"
+                                    Grid.Column="0"
+                                    FontSize="Medium"
+                                    LineBreakMode="TailTruncation"
+                                    Style="{StaticResource lblSubtitleFrameTask}"
                                     Text="{Binding Description}" />
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    HorizontalOptions="End"
+                                    Style="{StaticResource lblSubtitleFrameTask}"
+                                    Text="{Binding DateEvent, StringFormat='{0:dd/MM/yyyy}'}" />
                             </Grid>
                         </Frame>
                     </DataTemplate>

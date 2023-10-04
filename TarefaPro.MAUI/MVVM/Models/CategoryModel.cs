@@ -11,5 +11,8 @@ namespace TarefaPro.MAUI.MVVM.Models
         public string Description { get; set; }       
         public string Color { get; set; }
         public string IconName { get; set; }
+
+        [NotMapped]
+        public int CountTaskies { get; set; }
     }
 }
