@@ -11,17 +11,13 @@ namespace TarefaPro.MAUI.MVVM.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public bool IsReminde { get; set; }
+        public bool IsReminder { get; set; }
         public string Color { get; set; }
         public DateTime DateEvent { get; set; }
         public DateTime DateTask { get; set; }
         public TimeSpan HourTask { get; set; }
 
         [ForeignKey(typeof(CategoryModel))]
-        public int CategoryId { get; set; }
-
-        //[NotMapped]
-        [ManyToOne]
-        public CategoryModel CategoryModel { get; set; }
+        public int CategoryId { get; set; }                    
     }
 }

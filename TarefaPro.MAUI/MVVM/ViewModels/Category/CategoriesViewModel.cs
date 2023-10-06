@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using TarefaPro.MAUI.MVVM.Models;
 using TarefaPro.MAUI.MVVM.Views.Category;
-using TarefaPro.MAUI.MVVM.Views.Components.Category;
+using TarefaPro.MAUI.MVVM.Views.Components;
 using TarefaPro.MAUI.MVVM.Views.Tasks;
 using TarefaPro.MAUI.Repositories.Category;
 using TarefaPro.MAUI.Repositories.Tasks;
@@ -19,7 +19,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
         private readonly INavigationService _navigationService;
 
-        PopupCategoriesViewModel PopupCategory = new();
+        PopupActionsViewModel PopupCategory = new();
 
         Popup Popup = new();
 
@@ -94,6 +94,8 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
         public Command TaskOfCategoryCommand { get; set; }
 
+        public Command TestCommand { get; set; }
+
         public Command SelectedCategoryCommand { get; set; }
 
         #endregion
@@ -110,15 +112,25 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
             SelectedCategoryCommand = new Command<CategoryModel>(OnSelectedCategoryCommand);
             EditCategoryCommand = new Command(OnEditCategoryCommand);
-            TaskOfCategoryCommand = new Command(OnTaskOfCategoryCommand);           
+            TaskOfCategoryCommand = new Command(OnTaskOfCategoryCommand);
+            TestCommand = new Command(OnTestCommand);
         }
 
+        private async void OnTestCommand(object obj)
+        {
+            await App.Current.MainPage.DisplayAlert("Teste", "cai no test", "OK");
+        }
 
         private async void OnSelectedCategoryCommand(CategoryModel model)
         {
             SelectedCategory = model;
 
-            Popup = new PopupCategoriesPage(PopupCategory.SetParametersOnPopup(EditCategoryCommand, TaskOfCategoryCommand));
+            Popup = new PopupActionsPage(PopupCategory.SetParametersOnPopup(firstCommand: EditCategoryCommand,
+                                                                            secondCommand: TaskOfCategoryCommand,
+                                                                            thirdCommand: TestCommand,
+                                                                            titleFirstButton: "Editar",
+                                                                            titleSecondButton: "Tarefas",
+                                                                            titleThirdButton: "Excluir"));
 
             await App.Current.MainPage.ShowPopupAsync(Popup);
 
@@ -152,7 +164,6 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
             CheckIfHasCategories();           
         }
        
-
         public async void RemoveAllCategories()
         {
             _ = await _categoryRepository.DeleteAllAsync();

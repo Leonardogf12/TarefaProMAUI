@@ -1,8 +1,9 @@
 ﻿using CommunityToolkit.Maui;
+using TarefaPro.MAUI.MVVM.ViewModels;
 using TarefaPro.MAUI.MVVM.ViewModels.Category;
 using TarefaPro.MAUI.MVVM.ViewModels.Tasks;
 using TarefaPro.MAUI.MVVM.Views.Category;
-using TarefaPro.MAUI.MVVM.Views.Components.Category;
+using TarefaPro.MAUI.MVVM.Views.Components;
 using TarefaPro.MAUI.MVVM.Views.Tasks;
 using TarefaPro.MAUI.Services;
 
@@ -25,17 +26,17 @@ namespace TarefaPro.MAUI
                     fonts.AddFont("Montserrat-SemiBold.ttf", "MontserratSemiBold");
                 });
 
+            builder.Services.AddTransient<PopupActionsPage>();
             builder.Services.AddTransient<CategoriesPage>();
             builder.Services.AddTransient<AddCategoryPage>();
-            builder.Services.AddTransient<EditCategoryPage>();
-            builder.Services.AddTransient<PopupCategoriesPage>();
+            builder.Services.AddTransient<EditCategoryPage>();            
             builder.Services.AddTransient<TaskiesPage>();
             builder.Services.AddTransient<AddTaskPage>();
 
+            builder.Services.AddTransient<PopupActionsViewModel>();
             builder.Services.AddTransient<CategoriesViewModel>();
             builder.Services.AddTransient<AddCategoryViewModel>();
-            builder.Services.AddTransient<EditCategoryViewModel>();
-            builder.Services.AddTransient<PopupCategoriesViewModel>();
+            builder.Services.AddTransient<EditCategoryViewModel>();            
             builder.Services.AddTransient<TaskiesViewModel>();
             builder.Services.AddTransient<AddTaskViewModel>();
 

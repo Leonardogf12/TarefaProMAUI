@@ -195,7 +195,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels
         {
             get => _iconSelected;
             set => SetProperty(ref _iconSelected, value);
-        }
+        }      
 
         #endregion
 

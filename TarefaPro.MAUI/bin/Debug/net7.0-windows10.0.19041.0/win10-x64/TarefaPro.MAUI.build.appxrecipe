@@ -982,6 +982,21 @@
     <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\calendar_icon.scale-400.png">
       <PackagePath>calendar_icon.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_icon.scale-100.png">
+      <PackagePath>delete_icon.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_icon.scale-125.png">
+      <PackagePath>delete_icon.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_icon.scale-150.png">
+      <PackagePath>delete_icon.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_icon.scale-200.png">
+      <PackagePath>delete_icon.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_icon.scale-400.png">
+      <PackagePath>delete_icon.scale-400.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
     </AppxPackagedFile>
@@ -1086,6 +1101,81 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\hour_icon.scale-400.png">
       <PackagePath>hour_icon.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify0_icon.scale-100.png">
+      <PackagePath>notify0_icon.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify0_icon.scale-125.png">
+      <PackagePath>notify0_icon.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify0_icon.scale-150.png">
+      <PackagePath>notify0_icon.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify0_icon.scale-200.png">
+      <PackagePath>notify0_icon.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify0_icon.scale-400.png">
+      <PackagePath>notify0_icon.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify2_icon.scale-100.png">
+      <PackagePath>notify2_icon.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify2_icon.scale-125.png">
+      <PackagePath>notify2_icon.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify2_icon.scale-150.png">
+      <PackagePath>notify2_icon.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify2_icon.scale-200.png">
+      <PackagePath>notify2_icon.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify2_icon.scale-400.png">
+      <PackagePath>notify2_icon.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_0_icon.scale-100.png">
+      <PackagePath>notify_0_icon.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_0_icon.scale-125.png">
+      <PackagePath>notify_0_icon.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_0_icon.scale-150.png">
+      <PackagePath>notify_0_icon.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_0_icon.scale-200.png">
+      <PackagePath>notify_0_icon.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_0_icon.scale-400.png">
+      <PackagePath>notify_0_icon.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_1_icon.scale-100.png">
+      <PackagePath>notify_1_icon.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_1_icon.scale-125.png">
+      <PackagePath>notify_1_icon.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_1_icon.scale-150.png">
+      <PackagePath>notify_1_icon.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_1_icon.scale-200.png">
+      <PackagePath>notify_1_icon.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_1_icon.scale-400.png">
+      <PackagePath>notify_1_icon.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_icon.scale-100.png">
+      <PackagePath>notify_icon.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_icon.scale-125.png">
+      <PackagePath>notify_icon.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_icon.scale-150.png">
+      <PackagePath>notify_icon.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_icon.scale-200.png">
+      <PackagePath>notify_icon.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notify_icon.scale-400.png">
+      <PackagePath>notify_icon.scale-400.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\orange_check.scale-100.png">
       <PackagePath>orange_check.scale-100.png</PackagePath>

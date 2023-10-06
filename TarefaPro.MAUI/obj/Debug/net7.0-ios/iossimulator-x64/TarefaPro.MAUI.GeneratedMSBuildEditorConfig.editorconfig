@@ -46,11 +46,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\Category\EditCategoryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\Category\EditCategoryPage.xaml
 
-[S:/PROJETOS/Projetos MAUI/TarefaPro.MAUI/TarefaProMAUI/TarefaPro.MAUI/MVVM/Views/Components/Category/PopupCategoriesPage.xaml]
+[S:/PROJETOS/Projetos MAUI/TarefaPro.MAUI/TarefaProMAUI/TarefaPro.MAUI/MVVM/Views/Components/PopupActionsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.Components.Category.PopupCategoriesPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MVVM\Views\Components\Category\PopupCategoriesPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MVVM\Views\Components\Category\PopupCategoriesPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.Components.PopupActionsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\Components\PopupActionsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\Components\PopupActionsPage.xaml
 
 [S:/PROJETOS/Projetos MAUI/TarefaPro.MAUI/TarefaProMAUI/TarefaPro.MAUI/MVVM/Views/Tasks/AddTaskPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

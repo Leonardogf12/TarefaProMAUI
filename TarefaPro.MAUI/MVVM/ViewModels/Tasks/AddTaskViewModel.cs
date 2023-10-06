@@ -117,7 +117,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
                 newTask.Color = CategorySelectedToTask.Color;
                 newTask.CategoryId = CategorySelectedToTask.Id;
                 newTask.DateEvent = DateEvent;
-                newTask.IsReminde = IsEnabledReminder;
+                newTask.IsReminder = IsEnabledReminder;
                 newTask.DateTask = IsEnabledReminder ? DateReminde : new DateTime();               
                 newTask.HourTask = IsEnabledReminder ? HourReminde : new TimeSpan();
 

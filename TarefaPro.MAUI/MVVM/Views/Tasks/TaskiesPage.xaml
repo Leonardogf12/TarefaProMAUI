@@ -123,17 +123,6 @@
 
                                 <Image
                                     Grid.Row="0"
-                                    Grid.Column="0"
-                                    HeightRequest="25"
-                                    HorizontalOptions="Start"
-                                    Source="dotnet_bot"
-                                    VerticalOptions="Start">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer />
-                                    </Image.GestureRecognizers>
-                                </Image>
-                                <Image
-                                    Grid.Row="0"
                                     Grid.Column="1"
                                     HeightRequest="30"
                                     HorizontalOptions="End"

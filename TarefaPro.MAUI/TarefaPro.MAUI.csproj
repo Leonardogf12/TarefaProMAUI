@@ -57,12 +57,15 @@
 	  <None Remove="Resources\Images\blue_check.svg" />
 	  <None Remove="Resources\Images\blue_not_check.svg" />
 	  <None Remove="Resources\Images\calendar_icon.svg" />
+	  <None Remove="Resources\Images\delete_icon.svg" />
 	  <None Remove="Resources\Images\edit_icon.svg" />
 	  <None Remove="Resources\Images\edit_white_icon.svg" />
 	  <None Remove="Resources\Images\goback_icon.svg" />
 	  <None Remove="Resources\Images\green_check.svg" />
 	  <None Remove="Resources\Images\green_not_check.svg" />
 	  <None Remove="Resources\Images\hour_icon.svg" />
+	  <None Remove="Resources\Images\notify_0_icon.svg" />
+	  <None Remove="Resources\Images\notify_1_icon.svg" />
 	  <None Remove="Resources\Images\orange_check.svg" />
 	  <None Remove="Resources\Images\orange_not_check.svg" />
 	  <None Remove="Resources\Images\salmon_check.svg" />
@@ -93,6 +96,9 @@
 	  <Compile Update="MVVM\Views\Category\CategoriesPage.xaml.cs">
 	    <DependentUpon>CategoriesPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="MVVM\Views\Components\PopupActionsPage.xaml.cs">
+	    <DependentUpon>PopupActionsPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -105,7 +111,7 @@
 	  <MauiXaml Update="MVVM\Views\Category\EditCategoryPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\Components\Category\PopupCategoriesPage.xaml">
+	  <MauiXaml Update="MVVM\Views\Components\PopupActionsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\Tasks\AddTaskPage.xaml">

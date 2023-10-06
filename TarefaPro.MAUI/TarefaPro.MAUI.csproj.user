@@ -26,7 +26,7 @@
     <MauiXaml Update="MVVM\Views\Category\EditCategoryPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="MVVM\Views\Components\Category\PopupCategoriesPage.xaml">
+    <MauiXaml Update="MVVM\Views\Components\PopupActionsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="MVVM\Views\Tasks\AddTaskPage.xaml">

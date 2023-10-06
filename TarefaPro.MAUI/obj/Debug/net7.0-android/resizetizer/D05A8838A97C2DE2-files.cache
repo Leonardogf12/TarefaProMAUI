@@ -3,6 +3,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\add_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\blue_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\blue_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\calendar_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\delete_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\edit_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\edit_white_icon.png
@@ -10,6 +11,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\goback_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\green_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\green_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\hour_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\notify2_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\notify_0_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\notify_1_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\notify_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\orange_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\orange_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\salmon_check.png
@@ -25,6 +30,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\add_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\blue_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\blue_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\calendar_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\delete_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\edit_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\edit_white_icon.png
@@ -32,6 +38,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\goback_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\green_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\green_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\hour_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\notify2_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\notify_0_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\notify_1_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\notify_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\orange_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\orange_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\salmon_check.png
@@ -47,6 +57,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\add_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\blue_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\blue_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\calendar_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\delete_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\edit_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\edit_white_icon.png
@@ -54,6 +65,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\goback_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\green_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\green_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\hour_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\notify2_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\notify_0_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\notify_1_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\notify_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\orange_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\orange_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\salmon_check.png
@@ -69,6 +84,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\add_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\blue_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\blue_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\calendar_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\delete_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\edit_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\edit_white_icon.png
@@ -76,6 +92,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\goback_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\green_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\green_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\hour_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\notify2_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\notify_0_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\notify_1_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\notify_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\orange_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\orange_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\salmon_check.png
@@ -91,6 +111,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\add_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\blue_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\blue_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\calendar_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\delete_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\edit_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\edit_white_icon.png
@@ -98,6 +119,10 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\goback_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\green_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\green_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\hour_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\notify2_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\notify_0_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\notify_1_icon.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\notify_icon.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\orange_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\orange_not_check.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\salmon_check.png
