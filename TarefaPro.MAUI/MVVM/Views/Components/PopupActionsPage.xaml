@@ -59,12 +59,11 @@
                             VerticalOptions="Center" />
                     </Grid>
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer
+                        <!--<TapGestureRecognizer
                             Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:PopupActionsViewModel}}}"
                             CommandParameter="{Binding .}"
-                            Tapped="TapGestureRecognizer_Tapped" />
-                        <!--<TapGestureRecognizer Command="{Binding ThirdCommand}" />-->
-                        <!--<TapGestureRecognizer Command="{Binding FirstCommand}" />-->
+                            Tapped="TapGestureRecognizer_Tapped" />-->
+                        <TapGestureRecognizer Command="{Binding FirstCommand}" />
                     </Border.GestureRecognizers>
                 </Border>
 
@@ -97,11 +96,11 @@
                             VerticalOptions="Center" />
                     </Grid>
                     <Border.GestureRecognizers>
-                        <!--<TapGestureRecognizer Command="{Binding SecondCommand}" Tapped="TapGestureRecognizer_Tapped" />-->
-                        <TapGestureRecognizer
+                        <TapGestureRecognizer Command="{Binding SecondCommand}" />
+                        <!--<TapGestureRecognizer
                             Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:PopupActionsViewModel}}}"
                             CommandParameter="{Binding .}"
-                            Tapped="TapGestureRecognizer_Tapped2" />
+                            Tapped="TapGestureRecognizer_Tapped2" />-->
                     </Border.GestureRecognizers>
                 </Border>
 
@@ -134,11 +133,11 @@
                             VerticalOptions="Center" />
                     </Grid>
                     <Border.GestureRecognizers>
-                        <TapGestureRecognizer
+                        <!--<TapGestureRecognizer
                             Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:PopupActionsViewModel}}}"
                             CommandParameter="{Binding .}"
-                            Tapped="TapGestureRecognizer_Tapped3" />
-                        <!--<TapGestureRecognizer Command="{Binding ThirdCommand}" />-->
+                            Tapped="TapGestureRecognizer_Tapped3" />-->
+                        <TapGestureRecognizer Command="{Binding ThirdCommand}" />
                     </Border.GestureRecognizers>
                 </Border>
 

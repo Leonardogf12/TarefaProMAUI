@@ -6,10 +6,27 @@
     xmlns:local="clr-namespace:TarefaPro.MAUI">
     <Application.Resources>
         <ResourceDictionary>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="borderFormRemindeEnabled" TargetType="Border">
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="StrokeThickness" Value="0" />
+                <Setter Property="Padding" Value="-2" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+
+            <Style x:Key="borderFormRemindeDisabled" TargetType="Border">
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="StrokeThickness" Value="0" />
+                <Setter Property="Padding" Value="-2" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Gray100}" />
+            </Style>
+
         </ResourceDictionary>
+
     </Application.Resources>
 </Application>

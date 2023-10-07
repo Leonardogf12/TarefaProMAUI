@@ -29,10 +29,10 @@ public partial class CategoriesPage : ContentPage
     {   
         var vm = BindingContext as CategoriesViewModel;
 
-        var result = await DisplayAlert("Excluir", "Deseja realmente excluir tudo. Isso excluira tambem as tarefas.", "Sim", "Não");
+        var result = await DisplayAlert("Excluir", "Deseja realmente excluir todas as categorias?. Fazer isso resultará na exclusão de todas as tarefas.", "Sim", "Não");
 
         if (result)
-            vm.RemoveAllCategories();
+            await vm.RemoveAllCategories();
     }
 
 
@@ -43,11 +43,20 @@ public partial class CategoriesPage : ContentPage
         if (vm.HasSelectedCategory) return;
 
         vm.HasSelectedCategory = true;
+        
+        View element;
 
-        var element = sender as Image;
-
-        await ScaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
-
+        if (sender is Image)
+        {
+            element = sender as Image;
+            await ScaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
+        }                           
+        else
+        {
+            element = sender as Frame;
+            await ScaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.99);
+        }      
+                       
         vm.SelectedCategoryCommand.Execute(e.Parameter);
     }
 }

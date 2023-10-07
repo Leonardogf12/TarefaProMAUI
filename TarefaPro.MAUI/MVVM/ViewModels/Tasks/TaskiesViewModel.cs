@@ -123,8 +123,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         }
 
 
-        private void OnEditTaskCommand()
-        {           
+        private async void OnEditTaskCommand()
+        {
+         
         }
 
         private void CheckIfHasTaskies() => HasTaskies = TaskiesCollection.Count > 0 ? true : false;
@@ -133,6 +134,15 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         {
             await LoadTaskies();
             CheckIfHasTaskies();
+        }
+
+        public async Task RemoveAllTasks()
+        {
+            IsBusy = true;
+            await _taskRepository.DeleteAllAsync();
+            OnAppearing();
+            IsBusy = false;
+
         }
     }
 }

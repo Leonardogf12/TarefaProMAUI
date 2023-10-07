@@ -21,8 +21,28 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         private bool _isEnabledReminder = false;
         public bool IsEnabledReminder
         {
-            get=>_isEnabledReminder;
-            set => SetProperty(ref _isEnabledReminder, value);
+            get => _isEnabledReminder;
+            set
+            {
+                SetProperty(ref _isEnabledReminder, value);
+
+                if (value)
+                {
+                    BackgroundIsEnabled = (Style)App.Current.Resources["borderFormRemindeEnabled"];
+                }
+                else
+                {
+                    BackgroundIsEnabled = (Style)App.Current.Resources["borderFormRemindeDisabled"];
+                }
+               
+            }
+        }
+
+        private Style _backgroundIsEnabled = (Style)App.Current.Resources["borderFormRemindeDisabled"];
+        public Style BackgroundIsEnabled
+        {
+            get => _backgroundIsEnabled;
+            set => SetProperty(ref _backgroundIsEnabled, value);
         }
 
 
@@ -65,7 +85,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
             set => SetProperty(ref _maxDateEvent, value);
         }
 
-        
+
         private DateTime _dateReminde = DateTime.Now;
         public DateTime DateReminde
         {
@@ -118,7 +138,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
                 newTask.CategoryId = CategorySelectedToTask.Id;
                 newTask.DateEvent = DateEvent;
                 newTask.IsReminder = IsEnabledReminder;
-                newTask.DateTask = IsEnabledReminder ? DateReminde : new DateTime();               
+                newTask.DateTask = IsEnabledReminder ? DateReminde : new DateTime();
                 newTask.HourTask = IsEnabledReminder ? HourReminde : new TimeSpan();
 
                 var result = await _taskRepository.SaveAsync(newTask);
@@ -127,14 +147,14 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
                     await App.Current.MainPage.DisplayAlert("Tarefa", "Tarefa salva com sucesso.", "OK");
             }
             catch (Exception ex)
-            {                
+            {
                 Console.WriteLine(ex);
                 await App.Current.MainPage.DisplayAlert("Tarefa", "Ocorreu um erro durante o registro da Tarefa.", "OK");
             }
             finally
             {
                 IsBusy = false;
-            }                     
+            }
         }
 
         public void OnAppearing()

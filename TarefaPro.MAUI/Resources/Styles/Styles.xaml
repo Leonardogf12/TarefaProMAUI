@@ -14,11 +14,11 @@
         <Setter Property="SelectedIndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray100}}" />
     </Style>
 
-    <Style TargetType="Border">
+    <!--<Style TargetType="Border">
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
         <Setter Property="StrokeShape" Value="Rectangle" />
         <Setter Property="StrokeThickness" Value="1" />
-    </Style>
+    </Style>-->
 
     <Style TargetType="BoxView">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
@@ -158,7 +158,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="Label">
+    <!--<Style TargetType="Label">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
@@ -175,7 +175,7 @@
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
-    </Style>
+    </Style>-->
 
     <Style TargetType="ListView">
         <Setter Property="SeparatorColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
@@ -407,6 +407,7 @@
     <!--  New Styles  -->
 
     <Style x:Key="lblTitle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource Gray600}" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="FontFamily" Value="MontserratSemiBold" />
         <Setter Property="FontSize" Value="25" />
@@ -442,10 +443,11 @@
         <Setter Property="VerticalOptions" Value="Start" />
         <Setter Property="FontFamily" Value="MontserratRegular" />
         <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="TextColor" Value="{StaticResource Gray400}" />
+        <Setter Property="TextColor" Value="{StaticResource Gray600}" />
     </Style>
 
     <Style x:Key="borderSearch" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="White" />
         <Setter Property="HeightRequest" Value="40" />
         <Setter Property="StrokeThickness" Value="0" />
         <Setter Property="Padding" Value="-2" />
@@ -455,7 +457,7 @@
         <Setter Property="FontFamily" Value="MontserratRegular" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="TextColor" Value="Black" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryGray}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource Gray400}" />
         <Setter Property="Placeholder" Value="Buscar" />
     </Style>
 
@@ -463,13 +465,14 @@
         <Setter Property="HeightRequest" Value="45" />
         <Setter Property="StrokeThickness" Value="0" />
         <Setter Property="Padding" Value="-2" />
+        <Setter Property="BackgroundColor" Value="White" />
     </Style>
 
     <Style x:Key="entryForm" TargetType="Entry">
         <Setter Property="FontFamily" Value="MontserratRegular" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="TextColor" Value="Black" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryGray}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource Gray400}" />
         <Setter Property="Margin" Value="10,0,10,0" />
     </Style>
 
@@ -477,9 +480,8 @@
         <Setter Property="FontFamily" Value="MontserratSemiBold" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="TextColor" Value="White" />
-        <Setter Property="Text" Value="Novo" />
+        <Setter Property="Text" Value="Salvar" />
         <Setter Property="HeightRequest" Value="45" />
-
     </Style>
 
     <Style x:Key="btnEdit" TargetType="Button">

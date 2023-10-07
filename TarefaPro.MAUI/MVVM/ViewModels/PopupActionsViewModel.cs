@@ -96,16 +96,16 @@
             };
         }
 
-        public void SetSelectedCommand(object parameter)
-        {
-            if(FirstExecuted)
-            FirstCommand.Execute(parameter);
+        //public void SetSelectedCommand(object parameter)
+        //{
+        //    if(FirstExecuted)
+        //    FirstCommand.Execute(parameter);
 
-            if (SecondExecuted)
-                SecondCommand.Execute(parameter);
+        //    if (SecondExecuted)
+        //        SecondCommand.Execute(parameter);
 
-            if (ThirdExecuted)
-                ThirdCommand.Execute(parameter);
-        }
+        //    if (ThirdExecuted)
+        //        ThirdCommand.Execute(parameter);
+        //}
     }
 }

@@ -94,7 +94,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
         public Command TaskOfCategoryCommand { get; set; }
 
-        public Command TestCommand { get; set; }
+        public Command DeleteCategoryCommand { get; set; }
 
         public Command SelectedCategoryCommand { get; set; }
 
@@ -113,12 +113,37 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
             SelectedCategoryCommand = new Command<CategoryModel>(OnSelectedCategoryCommand);
             EditCategoryCommand = new Command(OnEditCategoryCommand);
             TaskOfCategoryCommand = new Command(OnTaskOfCategoryCommand);
-            TestCommand = new Command(OnTestCommand);
+            DeleteCategoryCommand = new Command(async () => await OnDeleteCategoryCommand());
         }
 
-        private async void OnTestCommand(object obj)
-        {
-            await App.Current.MainPage.DisplayAlert("Teste", "cai no test", "OK");
+        private async Task OnDeleteCategoryCommand()
+        {          
+            try
+            {
+                Popup.Close();
+
+                var result = await App.Current.MainPage.DisplayAlert("Excluir", "Deseja realmente excluir esta categoria?", "Sim", "Não");
+
+                if (result)
+                {
+                    IsBusy = true;
+
+                    await Task.Delay(500);
+
+                    await _categoryRepository.DeleteAsync(SelectedCategory);
+
+                    OnAppearing();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+
         }
 
         private async void OnSelectedCategoryCommand(CategoryModel model)
@@ -127,7 +152,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
             Popup = new PopupActionsPage(PopupCategory.SetParametersOnPopup(firstCommand: EditCategoryCommand,
                                                                             secondCommand: TaskOfCategoryCommand,
-                                                                            thirdCommand: TestCommand,
+                                                                            thirdCommand: DeleteCategoryCommand,
                                                                             titleFirstButton: "Editar",
                                                                             titleSecondButton: "Tarefas",
                                                                             titleThirdButton: "Excluir"));
@@ -139,34 +164,52 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
 
         public async Task LoadCategories()
         {
-            CategoriesCollection.Clear();
+            IsBusy = true;
 
-            var categories = await _categoryRepository.GetAllAsync();
-
-            foreach (var x in categories) CategoriesCollection.Add(x);
-
-            TotalCategories = CategoriesCollection.Count;
-
-            var taskies = await _taskRepository.GetAllAsync();
-
-            foreach (var item in CategoriesCollection)
+            try
             {
-                item.CountTaskies = taskies.Where(x => x.CategoryId.Equals(item.Id)).Count();
-                continue;
+                CategoriesCollection.Clear();
+
+                var categories = await _categoryRepository.GetAllAsync();
+
+                foreach (var x in categories) CategoriesCollection.Add(x);
+
+                TotalCategories = CategoriesCollection.Count;
+
+                var taskies = await _taskRepository.GetAllAsync();
+
+                foreach (var item in CategoriesCollection)
+                {
+                    item.CountTaskies = taskies.Where(x => x.CategoryId.Equals(item.Id)).Count();
+                    continue;
+                }
+
+                await Task.Delay(300);
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+           
         }
 
         public void CheckIfHasCategories() => HasCategories = CategoriesCollection.Count > 0 ? true : false;
 
         public async void OnAppearing()
         {
+            IsBusy = true;
             await LoadCategories();
-            CheckIfHasCategories();           
+            CheckIfHasCategories();
+            IsBusy = false;
         }
-       
-        public async void RemoveAllCategories()
+
+        public async Task RemoveAllCategories()
         {
-            _ = await _categoryRepository.DeleteAllAsync();
+            await _categoryRepository.DeleteAllAsync();
 
             OnAppearing();
         }

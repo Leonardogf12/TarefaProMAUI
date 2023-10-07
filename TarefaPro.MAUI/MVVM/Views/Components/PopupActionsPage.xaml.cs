@@ -6,7 +6,7 @@ namespace TarefaPro.MAUI.MVVM.Views.Components;
 
 public partial class PopupActionsPage : Popup
 {
-    ScaleUpScaleDownHelper scaleUpScaleDownHelper = new();
+    //ScaleUpScaleDownHelper scaleUpScaleDownHelper = new();
 
     public PopupActionsPage(PopupActionsViewModel popup)
 	{
@@ -15,42 +15,42 @@ public partial class PopupActionsPage : Popup
 		BindingContext = popup;
 	}
 
-    public async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
-    {
-        var vm = BindingContext as PopupActionsViewModel;
+    //public async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    //{
+    //    var vm = BindingContext as PopupActionsViewModel;
 
-        var element = sender as Border;
+    //    var element = sender as Border;
 
-        await scaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
+    //    await scaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
 
-        vm.FirstExecuted = true;
+    //    vm.FirstExecuted = true;
 
-        vm.SetSelectedCommand(e.Parameter);  
-    }
+    //   vm.SetSelectedCommand(e.Parameter);  
+    //}
 
-    private async void TapGestureRecognizer_Tapped2(object sender, TappedEventArgs e)
-    {
-        var vm = BindingContext as PopupActionsViewModel;
+    //private async void TapGestureRecognizer_Tapped2(object sender, TappedEventArgs e)
+    //{
+    //    var vm = BindingContext as PopupActionsViewModel;
 
-        var element = sender as Border;
+    //    var element = sender as Border;
 
-        await scaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
+    //    await scaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
 
-        vm.SecondExecuted = true;
+    //    vm.SecondExecuted = true;
 
-        vm.SetSelectedCommand(e.Parameter);
-    }
+    //    vm.SetSelectedCommand(e.Parameter);
+    //}
 
-    private async void TapGestureRecognizer_Tapped3(object sender, TappedEventArgs e)
-    {
-        var vm = BindingContext as PopupActionsViewModel;
+    //private async void TapGestureRecognizer_Tapped3(object sender, TappedEventArgs e)
+    //{
+    //    var vm = BindingContext as PopupActionsViewModel;
 
-        var element = sender as Border;
+    //    var element = sender as Border;
 
-        await scaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
+    //    await scaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
 
-        vm.ThirdExecuted = true;
+    //    vm.ThirdExecuted = true;
 
-        vm.SetSelectedCommand(e.Parameter);
-    }
+    //    vm.SetSelectedCommand(e.Parameter);
+    //}
 }

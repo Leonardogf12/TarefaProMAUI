@@ -14,7 +14,7 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -23,14 +23,6 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-
-            <ImageButton
-                Grid.Column="0"
-                Clicked="RemoveAllTaskies_Clicked"
-                HeightRequest="25"
-                HorizontalOptions="Center"
-                IsVisible="{Binding HasTaskies}"
-                Source="dotnet_bot" />
 
             <ImageButton
                 Grid.Row="1"
@@ -42,7 +34,7 @@
 
             <ImageButton
                 Grid.Column="2"
-                Margin="15"
+                Margin="0,15,0,0"
                 Clicked="AddTaskie_Clicked"
                 HeightRequest="25"
                 HorizontalOptions="EndAndExpand"
@@ -59,10 +51,8 @@
         <Label
             Grid.Row="2"
             FontFamily="MontserratSemiBold"
-            FontSize="Medium"
-            HorizontalOptions="Start"
-            Text="{Binding CategorySelected.Name}"
-            TextColor="Gray" />
+            Style="{StaticResource lblSecondary}"
+            Text="{Binding CategorySelected.Name}" />
 
         <Border Grid.Row="3" Style="{StaticResource borderSearch}">
             <Border.StrokeShape>
@@ -81,20 +71,47 @@
             </Grid>
         </Border>
 
-        <ImageButton
+        <StackLayout
             Grid.Row="5"
-            Clicked="AddTaskie_Clicked"
-            HeightRequest="25"
+            HorizontalOptions="FillAndExpand"
             IsVisible="{Binding HasNotTaskies}"
-            Source="add_icon"
-            VerticalOptions="Center" />
+            Spacing="10"
+            VerticalOptions="Center">
+            <Label HorizontalTextAlignment="Center" Text="Clique aqui para adicionar uma tarefa." />
+            <ImageButton
+                Clicked="AddTaskie_Clicked"
+                HeightRequest="25"
+                Source="add_icon"
+                VerticalOptions="Center" />
+        </StackLayout>
 
-        <Label
-            Grid.Row="4"
-            HorizontalOptions="End"
-            Text="{Binding TotalTaskies, StringFormat='Total: {0}'}"
-            TextColor="{StaticResource Gray400}"
-            VerticalOptions="Center" />
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Grid.Column="0"
+                Padding="4"
+                BackgroundColor="Gray"
+                Clicked="RemoveAllTaskies_Clicked"
+                CornerRadius="30"
+                HeightRequest="30"
+                HorizontalOptions="Start"
+                IsVisible="{Binding HasTaskies}"
+                Text="Excluir Tudo"
+                TextColor="White"
+                VerticalOptions="Center" />
+
+            <Label
+                Grid.Column="1"
+                HorizontalOptions="End"
+                Text="{Binding TotalTaskies, StringFormat='Total: {0}'}"
+                TextColor="{StaticResource Gray400}"
+                VerticalOptions="Center" />
+        </Grid>
+
 
         <Grid Grid.Row="5" IsVisible="{Binding HasTaskies}">
 
@@ -126,8 +143,7 @@
                                     Grid.Column="1"
                                     HeightRequest="30"
                                     HorizontalOptions="End"
-                                    Source="actions_icon"
-                                    VerticalOptions="Start">
+                                    Source="actions_icon">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer
                                             Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:TaskiesViewModel}}}"
@@ -163,6 +179,11 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
-
+        <ActivityIndicator
+            Grid.Row="5"
+            Grid.ColumnSpan="4"
+            IsRunning="{Binding IsBusy}"
+            VerticalOptions="Center"
+            Color="{StaticResource Gray600}" />
     </Grid>
 </ContentPage>

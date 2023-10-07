@@ -79,7 +79,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
         private void SetLayoutPropertyOfCategorySelected()
         {
             BackgroundColorButtonNew = Color.FromArgb(SelectedCategory.Color);
-           
+            ColorFrame = SelectedCategory.Color;
+
+
             if (SelectedCategory.IconName.Equals(StringConstants.IconGreenName))
             {
                 GreenCheckImageSource = ImageSource.FromFile(StringConstants.IconGreenName);

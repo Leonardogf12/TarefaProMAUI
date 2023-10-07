@@ -144,7 +144,8 @@
             Grid.Row="5"
             BackgroundColor="{Binding BackgroundColorButtonNew}"
             Clicked="EditCategory_Clicked"
-            Style="{StaticResource btnEdit}" />
+            Style="{StaticResource btnEdit}"
+            Text="Editar" />
 
     </Grid>
 </ContentPage>

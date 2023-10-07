@@ -27,9 +27,14 @@ public partial class TaskiesPage : ContentPage
         vm.SelectedTaskCommand.Execute(e.Parameter);
     }
 
-    private void RemoveAllTaskies_Clicked(object sender, EventArgs e)
+    private async void RemoveAllTaskies_Clicked(object sender, EventArgs e)
     {
+        var vm = BindingContext as TaskiesViewModel;
+       
+        var result = await DisplayAlert("Excluir", "Deseja realmente excluir todas as tarefas desta categoria?", "Sim", "Não");
 
+        if (result)
+            await vm.RemoveAllTasks();
     }
 
     private void AddTaskie_Clicked(object sender, EventArgs e)

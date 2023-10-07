@@ -12,8 +12,8 @@ public partial class AddTaskPage : ContentPage
 	}
 
     private async void Back_Clicked(object sender, EventArgs e)=> await Navigation.PopAsync();
-      
-    private async void AddTask_Tapped(object sender, TappedEventArgs e)
+
+    private async void AddTask_Clicked(object sender, EventArgs e)
     {
         var vm = BindingContext as AddTaskViewModel;
 
@@ -61,4 +61,6 @@ public partial class AddTaskPage : ContentPage
 
         vm.OnAppearing();
     }
+
+   
 }

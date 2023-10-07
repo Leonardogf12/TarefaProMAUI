@@ -2066,14 +2066,6 @@ S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\lp\159\jl\files.cache
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\lp\160\jl\files.cache
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\lp\161\jl\files.cache
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\typemaps.x86_64.ll
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\environment.x86_64.ll
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\compressed_assemblies.x86_64.ll
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\typemaps.x86_64.o
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\environment.x86_64.o
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\compressed_assemblies.x86_64.o
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\jni_remap.x86_64.o
-S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\app_shared_libraries\x86_64\libxamarin-app.so
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\notify_icon.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\notify_icon.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\notify_icon.png
@@ -2099,3 +2091,11 @@ S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\delete_icon.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\delete_icon.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\delete_icon.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\typemaps.x86_64.ll
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\environment.x86_64.ll
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\compressed_assemblies.x86_64.ll
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\typemaps.x86_64.o
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\environment.x86_64.o
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\compressed_assemblies.x86_64.o
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\android\jni_remap.x86_64.o
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-android\app_shared_libraries\x86_64\libxamarin-app.so
