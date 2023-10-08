@@ -4,20 +4,18 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:TarefaPro.MAUI.MVVM.ViewModels.Category"
-    BackgroundColor="{StaticResource BackgroudDefault}"
+    BackgroundColor="{StaticResource BackgroundDefault}"
     Shell.NavBarIsVisible="False">
 
-    <Grid Margin="20,0,20,0">
+    <Grid Margin="20,0,20,0" RowSpacing="20">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="65" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="20" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
-
 
         <ImageButton
             Grid.Column="0"
@@ -50,7 +48,6 @@
                 <Entry Grid.Column="1" Style="{StaticResource entrySearch}" />
             </Grid>
         </Border>
-
 
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
@@ -153,6 +150,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
+
         <ActivityIndicator
             Grid.Row="4"
             Grid.ColumnSpan="4"

@@ -32,6 +32,9 @@
     <MauiXaml Update="MVVM\Views\Tasks\AddTaskPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="MVVM\Views\Tasks\EditTaskPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="MVVM\Views\Tasks\TaskiesPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

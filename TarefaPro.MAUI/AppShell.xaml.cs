@@ -12,6 +12,7 @@ namespace TarefaPro.MAUI
             Routing.RegisterRoute(nameof(EditCategoryPage), typeof(EditCategoryPage));
             Routing.RegisterRoute(nameof(TaskiesPage), typeof(TaskiesPage));
             Routing.RegisterRoute(nameof(AddTaskPage), typeof(AddTaskPage));
+            Routing.RegisterRoute(nameof(EditTaskPage), typeof(EditTaskPage));
         }
     }
 }

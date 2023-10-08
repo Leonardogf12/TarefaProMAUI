@@ -4,17 +4,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:TarefaPro.MAUI.MVVM.ViewModels.Tasks"
-    BackgroundColor="{StaticResource BackgroudDefault}"
+    BackgroundColor="{StaticResource BackgroundDefault}"
     Shell.NavBarIsVisible="False">
 
     <Grid Margin="20,0,20,0">
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="40" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -42,12 +42,12 @@
                 Source="add_icon" />
         </Grid>
 
-
         <Label
             Grid.Row="1"
             HorizontalOptions="Center"
             Style="{StaticResource lblTitle}"
             Text="Tarefas" />
+
         <Label
             Grid.Row="2"
             FontFamily="MontserratSemiBold"
@@ -112,9 +112,7 @@
                 VerticalOptions="Center" />
         </Grid>
 
-
         <Grid Grid.Row="5" IsVisible="{Binding HasTaskies}">
-
             <CollectionView HorizontalOptions="Center" ItemsSource="{Binding TaskiesCollection}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -179,6 +177,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
+
         <ActivityIndicator
             Grid.Row="5"
             Grid.ColumnSpan="4"

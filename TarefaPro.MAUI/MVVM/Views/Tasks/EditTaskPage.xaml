@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TarefaPro.MAUI.MVVM.Views.Tasks.EditTaskPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource BackgroundDefault}"
+    Shell.NavBarIsVisible="False">
+    <ScrollView VerticalOptions="FillAndExpand">
+        <VerticalStackLayout>
+
+            <Grid Margin="20,0,20,0" RowSpacing="20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="60" />
+
+                </Grid.RowDefinitions>
+
+                <ImageButton
+                    Grid.Row="0"
+                    Margin="0,15,0,0"
+                    Clicked="Back_Clicked"
+                    HeightRequest="20"
+                    HorizontalOptions="Start"
+                    Source="goback_icon" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource lblTitle}"
+                    Text="Editar Tarefa" />
+
+                <Label
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    FontFamily="MontserratSemiBold"
+                    Style="{StaticResource lblSecondary}"
+                    Text="{Binding SelectedTask.Name}" />
+
+                <Border
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    StrokeThickness="0"
+                    Style="{StaticResource borderForm}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <Entry
+                        x:Name="entryName"
+                        Grid.Column="1"
+                        Placeholder="Nome"
+                        Style="{StaticResource entryForm}"
+                        Text="{Binding SelectedTask.Name}" />
+                </Border>
+
+                <Border
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    HeightRequest="120"
+                    StrokeThickness="0"
+                    Style="{StaticResource borderForm}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <Editor
+                        x:Name="entryDescription"
+                        Grid.Column="1"
+                        Placeholder="Descrição"
+                        Style="{StaticResource entryForm}"
+                        Text="{Binding SelectedTask.Description}" />
+                </Border>
+
+                <Label
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource lblSecondary}"
+                    Text="Data do Evento" />
+
+                <Border
+                    Grid.Row="6"
+                    Grid.ColumnSpan="2"
+                    StrokeThickness="0"
+                    Style="{StaticResource borderForm}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <DatePicker
+                        x:Name="entryEventDate"
+                        Grid.Column="1"
+                        Date="{Binding SelectedTask.DateEvent}"
+                        MaximumDate="{Binding MaxDateEvent}"
+                        MinimumDate="{Binding MinDateEvent}"
+                        Style="{StaticResource entryForm}" />
+                </Border>
+
+                <StackLayout
+                    Grid.Row="7"
+                    Padding="-5,0,0,0"
+                    Orientation="Horizontal"
+                    Spacing="10">
+                    <Switch
+                        IsToggled="false"
+                        OnColor="LightSlateGray"
+                        ThumbColor="CadetBlue"
+                        Toggled="ActiveNotify_Toogled" />
+
+                    <Label
+                        Grid.Row="7"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource lblSecondary}"
+                        Text="Ativar Lembrete?"
+                        VerticalOptions="Center" />
+                </StackLayout>
+
+                <Label
+                    Grid.Row="8"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource lblSecondary}"
+                    Text="Data do Lembrete" />
+
+                <Border
+                    Grid.Row="9"
+                    Grid.ColumnSpan="2"
+                    StrokeThickness="0"
+                    Style="{Binding BackgroundIsEnabled}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <DatePicker
+                        x:Name="entryNotifyDate"
+                        Grid.Column="1"
+                        Date="{Binding SelectedTask.DateTask}"
+                        IsEnabled="{Binding IsEnabledReminder}"
+                        MaximumDate="{Binding MaxDateReminde}"
+                        MinimumDate="{Binding MinDateReminde}"
+                        Style="{StaticResource entryForm}" />
+                </Border>
+
+                <Label
+                    Grid.Row="10"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource lblSecondary}"
+                    Text="Hora do Lembrete" />
+
+                <Border
+                    Grid.Row="11"
+                    Grid.ColumnSpan="2"
+                    StrokeThickness="0"
+                    Style="{Binding BackgroundIsEnabled}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <TimePicker
+                        x:Name="entryNotifyHour"
+                        Grid.Column="1"
+                        IsEnabled="{Binding IsEnabledReminder}"
+                        Style="{StaticResource entryForm}"
+                        Time="{Binding SelectedTask.HourTask}"
+                        VerticalOptions="Center" />
+                </Border>
+
+                <Button
+                    Grid.Row="12"
+                    BackgroundColor="{StaticResource PrimaryBlue}"
+                    Clicked="EditTask_Clicked"
+                    Style="{StaticResource btnNew}"
+                    Text="Editar" />
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

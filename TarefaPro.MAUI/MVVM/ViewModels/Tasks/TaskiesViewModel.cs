@@ -125,7 +125,14 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
         private async void OnEditTaskCommand()
         {
-         
+            Popup.Close();
+
+            Dictionary<string, object> Parameters = new Dictionary<string, object>
+            {
+                { "SelectedTask", SelectedTask }
+            };
+
+            await _navigationService.NavigationToPageAsync<EditTaskPage>(Parameters);
         }
 
         private void CheckIfHasTaskies() => HasTaskies = TaskiesCollection.Count > 0 ? true : false;

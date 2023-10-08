@@ -58,6 +58,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\Tasks\AddTaskPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\Tasks\AddTaskPage.xaml
 
+[S:/PROJETOS/Projetos MAUI/TarefaPro.MAUI/TarefaProMAUI/TarefaPro.MAUI/MVVM/Views/Tasks/EditTaskPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.Tasks.EditTaskPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\Tasks\EditTaskPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\Tasks\EditTaskPage.xaml
+
 [S:/PROJETOS/Projetos MAUI/TarefaPro.MAUI/TarefaProMAUI/TarefaPro.MAUI/MVVM/Views/Tasks/TaskiesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TarefaPro.MAUI.MVVM.Views.Tasks.TaskiesPage.xaml

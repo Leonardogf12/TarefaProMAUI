@@ -41,7 +41,7 @@
 
 
     <!--  New Colors  -->
-    <Color x:Key="BackgroudDefault">#E8E8E8</Color>
+    <Color x:Key="BackgroundDefault">#E8E8E8</Color>
     <Color x:Key="PrimaryGray">#474747</Color>
     <Color x:Key="SecondaryGray">#686868</Color>
     <Color x:Key="PrimarySalmon">#FE866A</Color>
