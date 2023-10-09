@@ -16,7 +16,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
         private readonly INavigationService _navigationService;
 
-        PopupActionsViewModel PopupTask = new();
+        PopupActionsDetailViewModel PopupTask = new();
 
         Popup Popup = new();
 
@@ -114,12 +114,12 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         public async void OnSelectedTaskCommand(TaskModel model)
         {
             SelectedTask = model;
+            
+            Popup = new PopupActionsDetailPage(PopupTask.SetParametersOnPopupActionsDetails(parameter: SelectedTask,
+                                                                                            firstCommand: EditTaskCommand, 
+                                                                                            titleFirstButton: "Editar"));
 
-            Popup = new PopupActionsPage(PopupTask.SetParametersOnPopup(EditTaskCommand, null));
-
-            await App.Current.MainPage.ShowPopupAsync(Popup);
-
-            //HasSelectedCategory = false;
+            await App.Current.MainPage.ShowPopupAsync(Popup);          
         }
 
 

@@ -27,6 +27,8 @@ namespace TarefaPro.MAUI
                 });
 
             builder.Services.AddTransient<PopupActionsPage>();
+            builder.Services.AddTransient<PopupActionsDetailPage>();
+
             builder.Services.AddTransient<CategoriesPage>();
             builder.Services.AddTransient<AddCategoryPage>();
             builder.Services.AddTransient<EditCategoryPage>();            
@@ -35,6 +37,7 @@ namespace TarefaPro.MAUI
             builder.Services.AddTransient<EditTaskPage>();
 
             builder.Services.AddTransient<PopupActionsViewModel>();
+            builder.Services.AddTransient<PopupActionsDetailViewModel>();
             builder.Services.AddTransient<CategoriesViewModel>();
             builder.Services.AddTransient<AddCategoryViewModel>();
             builder.Services.AddTransient<EditCategoryViewModel>();            

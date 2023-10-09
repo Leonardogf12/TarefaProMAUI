@@ -1,7 +1,11 @@
-﻿namespace TarefaPro.MAUI.MVVM.ViewModels
+﻿using TarefaPro.MAUI.MVVM.Models;
+
+namespace TarefaPro.MAUI.MVVM.ViewModels
 {
+ 
     public class PopupActionsViewModel : BaseViewModel
     {
+        
         private Command _firstCommand;
         public Command FirstCommand
         {
@@ -74,9 +78,12 @@
         }
 
 
+     
         public PopupActionsViewModel()
-        {
+        {           
         }
+
+      
 
         public PopupActionsViewModel SetParametersOnPopup(Command firstCommand = null,
                                                           Command secondCommand = null,
@@ -96,16 +103,6 @@
             };
         }
 
-        //public void SetSelectedCommand(object parameter)
-        //{
-        //    if(FirstExecuted)
-        //    FirstCommand.Execute(parameter);
-
-        //    if (SecondExecuted)
-        //        SecondCommand.Execute(parameter);
-
-        //    if (ThirdExecuted)
-        //        ThirdCommand.Execute(parameter);
-        //}
+       
     }
 }
