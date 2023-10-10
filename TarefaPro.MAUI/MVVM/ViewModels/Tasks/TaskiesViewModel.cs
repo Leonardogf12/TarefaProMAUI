@@ -179,18 +179,15 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         private void CheckIfHasTaskies() => HasTaskies = TaskiesCollection.Count > 0 ? true : false;
 
         public async void OnAppearing()
-        {
+        {          
             await LoadTaskies();
-            CheckIfHasTaskies();
+            CheckIfHasTaskies();         
         }
 
         public async Task RemoveAllTasks()
-        {
-            IsBusy = true;
+        {          
             await _taskRepository.DeleteAllAsync();
-            OnAppearing();
-            IsBusy = false;
-
+            OnAppearing();         
         }
 
         private string GetRemiderFormated()

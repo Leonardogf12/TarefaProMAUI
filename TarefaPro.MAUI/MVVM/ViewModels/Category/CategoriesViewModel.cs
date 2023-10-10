@@ -200,11 +200,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
         public void CheckIfHasCategories() => HasCategories = CategoriesCollection.Count > 0 ? true : false;
 
         public async void OnAppearing()
-        {
-            IsBusy = true;
+        {          
             await LoadCategories();
-            CheckIfHasCategories();
-            IsBusy = false;
+            CheckIfHasCategories();          
         }
 
         public async Task RemoveAllCategories()
