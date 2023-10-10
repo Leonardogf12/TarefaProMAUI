@@ -16,8 +16,6 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
         private readonly INavigationService _navigationService;
 
-        PopupActionsDetailViewModel PopupTask = new();
-
         Popup Popup = new();
 
         #region Properts
@@ -78,6 +76,8 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
         public Command SelectedTaskCommand { get; set; }
         public Command EditTaskCommand { get; private set; }
+        public Command DeleteTaskCommand { get; private set; }
+
 
         public TaskiesViewModel(INavigationService navigationService)
         {
@@ -86,7 +86,43 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
             SelectedTaskCommand = new Command<TaskModel>(OnSelectedTaskCommand);
             EditTaskCommand = new Command(OnEditTaskCommand);
-        }      
+            DeleteTaskCommand = new Command(OnDeleteTaskCommand);
+        }
+
+        private async void OnDeleteTaskCommand()
+        {
+            try
+            {
+                var question = await App.Current.MainPage.DisplayAlert("Excluir", "Deseja realmente excluir esta tarefa?", "Sim", "Não");
+
+                if (question)
+                {
+                    IsBusy = true;
+
+                    await Task.Delay(500);
+
+                    var result = await _taskRepository.DeleteAsync(SelectedTask);
+
+                    if (result > 0)
+                    {
+                        Popup.Close();
+
+                        await App.Current.MainPage.DisplayAlert("Sucesso", "Tarefa excluída com sucesso.", "Ok");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Erro", $"Ocorreu um erro inesperado enquanto tentava excluir a tarefa {SelectedTask.Name}", "Ok");
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                await LoadTaskies();
+                IsBusy = false;
+            }
+
+        }
 
         private async Task LoadTaskies()
         {
@@ -114,12 +150,17 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         public async void OnSelectedTaskCommand(TaskModel model)
         {
             SelectedTask = model;
-            
-            Popup = new PopupActionsDetailPage(PopupTask.SetParametersOnPopupActionsDetails(parameter: SelectedTask,
-                                                                                            firstCommand: EditTaskCommand, 
-                                                                                            titleFirstButton: "Editar"));
 
-            await App.Current.MainPage.ShowPopupAsync(Popup);          
+            PopupActionsDetailViewModel PopupTask = new();
+
+            Popup = new PopupActionsDetailPage(PopupTask.SetParametersOnPopupActionsDetails(firstCommand: EditTaskCommand,
+                                                                                            secondCommand: DeleteTaskCommand,
+                                                                                            titleFirstButton: "Editar",
+                                                                                            titleSecondButton: "Excluir",
+                                                                                            SelectedTask.DateEvent.ToShortDateString(),
+                                                                                            GetRemiderFormated()));
+
+            await App.Current.MainPage.ShowPopupAsync(Popup);
         }
 
 
@@ -151,5 +192,14 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
             IsBusy = false;
 
         }
+
+        private string GetRemiderFormated()
+        {
+            if (!SelectedTask.IsReminder)
+                return $"Não Definido";
+            else
+                return $"{SelectedTask.DateTask.ToShortDateString()} ás {SelectedTask.HourTask.ToString("h'h 'm'm'")}";
+        }
+
     }
 }

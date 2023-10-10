@@ -28,6 +28,13 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
                 category.Color = ColorFrame ?? StringConstants.ColorDefaultHex;
                 category.IconName = IconSelected ?? StringConstants.IconDefaultName;
 
+                var exist = await CheckIfExistCategory(category.Name);
+                if (exist)
+                {
+                    await App.Current.MainPage.DisplayAlert("Ops", "Já existe uma categoria com este nome. Favor verificar.", "OK");
+                    return;
+                }
+
                 var result = await _categoryRepository.SaveAsync(category);
 
                 if (result > 0)
@@ -42,6 +49,15 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
             {
                 IsBusy = false;
             }                              
+        }
+
+        private async Task<bool> CheckIfExistCategory(string name)
+        {
+            var result = await _categoryRepository.GetCategoryWithNameExistentAsync(name);
+            
+            if(result == null) return false;
+
+            return true;            
         }
 
     }

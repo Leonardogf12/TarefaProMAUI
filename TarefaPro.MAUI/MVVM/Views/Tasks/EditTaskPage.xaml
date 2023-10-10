@@ -112,7 +112,7 @@
                     Orientation="Horizontal"
                     Spacing="10">
                     <Switch
-                        IsToggled="false"
+                        IsToggled="{Binding IsReminderTask}"
                         OnColor="LightSlateGray"
                         ThumbColor="CadetBlue"
                         Toggled="ActiveNotify_Toogled" />

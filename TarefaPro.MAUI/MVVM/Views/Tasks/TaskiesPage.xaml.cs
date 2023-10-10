@@ -19,10 +19,19 @@ public partial class TaskiesPage : ContentPage
     private async void PopupActions_Tapped(object sender, TappedEventArgs e)
     {
         var vm = BindingContext as TaskiesViewModel;
+     
+        View element;
 
-        var element = sender as Image;
-
-        await ScaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
+        if (sender is Image)
+        {
+            element = sender as Image;
+            await ScaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.8);
+        }
+        else
+        {
+            element = sender as Frame;
+            await ScaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.99);
+        }
 
         vm.SelectedTaskCommand.Execute(e.Parameter);
     }

@@ -55,8 +55,10 @@ public partial class CategoriesPage : ContentPage
         {
             element = sender as Frame;
             await ScaleUpScaleDownHelper.SetScaleOnElement(element: element, scale: 0.99);
-        }      
-                       
+        }
+
+      
+
         vm.SelectedCategoryCommand.Execute(e.Parameter);
     }
 }

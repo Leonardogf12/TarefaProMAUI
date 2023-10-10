@@ -38,6 +38,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
             }
         }
 
+
         private Style _backgroundIsEnabled = (Style)App.Current.Resources["borderFormRemindeDisabled"];
         public Style BackgroundIsEnabled
         {
@@ -138,8 +139,15 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
                 newTask.CategoryId = CategorySelectedToTask.Id;
                 newTask.DateEvent = DateEvent;
                 newTask.IsReminder = IsEnabledReminder;
-                newTask.DateTask = IsEnabledReminder ? DateReminde : new DateTime();
+                newTask.DateTask = IsEnabledReminder ? DateReminde : DateTime.Now;
                 newTask.HourTask = IsEnabledReminder ? HourReminde : new TimeSpan();
+
+                var exist = await CheckIfExistTask(newTask.Name);
+                if (exist)
+                {
+                    await App.Current.MainPage.DisplayAlert("Ops", "Já existe uma Tarefa com este nome. Favor verificar.", "OK");
+                    return;
+                }
 
                 var result = await _taskRepository.SaveAsync(newTask);
 
@@ -157,6 +165,14 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
             }
         }
 
+        private async Task<bool> CheckIfExistTask(string name)
+        {
+            var result = await _taskRepository.GetTaskWithNameExistentAsync(name);
+
+            if (result == null) return false;
+
+            return true;
+        }
         public void OnAppearing()
         {
             //DateReminde = DateTime.Now;

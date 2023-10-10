@@ -122,6 +122,12 @@
                             BorderColor="Transparent"
                             CornerRadius="20"
                             HeightRequest="110">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:TaskiesViewModel}}}"
+                                    CommandParameter="{Binding .}"
+                                    Tapped="PopupActions_Tapped" />
+                            </Frame.GestureRecognizers>
                             <Grid
                                 Margin="-10"
                                 ColumnSpacing="5"

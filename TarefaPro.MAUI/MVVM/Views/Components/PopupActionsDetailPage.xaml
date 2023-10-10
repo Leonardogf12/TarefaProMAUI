@@ -13,11 +13,12 @@
             BorderColor="White"
             CornerRadius="30"
             HasShadow="True"
-            HeightRequest="200"
-            WidthRequest="250">
-            <Grid HorizontalOptions="FillAndExpand" RowSpacing="5">
+            HeightRequest="250"
+            WidthRequest="280">
+            <Grid HorizontalOptions="FillAndExpand" RowSpacing="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
@@ -63,11 +64,44 @@
                     </Border.GestureRecognizers>
                 </Border>
 
+                <Border
+                    Grid.Row="2"
+                    BackgroundColor="{StaticResource PrimarySalmon}"
+                    HeightRequest="40"
+                    StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="35" />
+                    </Border.StrokeShape>
+
+                    <Grid
+                        Margin="10,0,0,0"
+                        ColumnSpacing="10"
+                        HorizontalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="0"
+                            HeightRequest="18"
+                            Source="delete_icon" />
+                        <Label
+                            Grid.Column="1"
+                            FontFamily="MontserratRegular"
+                            FontSize="16"
+                            Text="{Binding TitleSecondButton}"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+                    </Grid>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SecondCommand}" />
+                    </Border.GestureRecognizers>
+                </Border>
 
                 <Grid
-                    Grid.Row="2"
+                    Grid.Row="3"
                     HorizontalOptions="FillAndExpand"
-                    RowSpacing="5">
+                    RowSpacing="3">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
@@ -85,17 +119,15 @@
                         FontFamily="MontserratRegular"
                         FontSize="Small"
                         HorizontalOptions="Start"
-                        Text="Evento: nada ainda" />
+                        Text="{Binding DateEvent, StringFormat='Evento: {0}'}" />
 
                     <Label
                         Grid.Row="2"
                         FontFamily="MontserratRegular"
                         FontSize="Small"
                         HorizontalOptions="Start"
-                        Text="{Binding SelectedTask.DateEvent}" />
+                        Text="{Binding HourAndDateReminderFormated, StringFormat='Lembrete: {0}'}" />
                 </Grid>
-
-
             </Grid>
         </Frame>
     </VerticalStackLayout>

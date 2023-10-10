@@ -11,7 +11,7 @@ namespace TarefaPro.MAUI.Repositories
             _db = new SQLiteAsyncConnection(App.dbPath);
             _db.CreateTableAsync<T>().Wait();
         }
-
+    
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _db.Table<T>().ToListAsync();

@@ -62,7 +62,6 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Category
             {
                 IsBusy = false;
             }
-
         }
 
         private async Task EditTasksOfCategory()

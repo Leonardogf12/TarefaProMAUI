@@ -45,6 +45,7 @@
                     <Entry
                         x:Name="entryName"
                         Grid.Column="1"
+                        Keyboard="Text"
                         Placeholder="Nome"
                         Style="{StaticResource entryForm}"
                         Text="{Binding Name}" />
@@ -62,6 +63,7 @@
                     <Editor
                         x:Name="entryDescription"
                         Grid.Column="1"
+                        Keyboard="Text"
                         Placeholder="Descrição"
                         Style="{StaticResource entryForm}"
                         Text="{Binding Description}" />
