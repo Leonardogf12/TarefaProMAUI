@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "518354727508",
+    "project_id": "mauinotifyfirebase",
+    "storage_bucket": "mauinotifyfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518354727508:android:2cfc5ac222be20d1d733c1",
+        "android_client_info": {
+          "package_name": "com.companyname.mauinotifyfirebase"                          
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUdQFDOUOa4vsbuk7Y3a7O0uMo5gJ8njQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -18,6 +18,7 @@
           "Microsoft.Maui.Graphics": "7.0.92",
           "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": "7.0.92",
           "Microsoft.WindowsAppSDK": "1.2.221209.1",
+          "Plugin.LocalNotification": "10.1.8",
           "SQLiteNetExtensions": "2.1.0",
           "SQLitePCLRaw.bundle_green": "2.1.5",
           "SQLitePCLRaw.core": "2.1.5",
@@ -1078,6 +1079,14 @@
           }
         }
       },
+      "Plugin.LocalNotification/10.1.8": {
+        "runtime": {
+          "lib/net7.0/Plugin.LocalNotification.dll": {
+            "assemblyVersion": "10.1.8.0",
+            "fileVersion": "10.1.8.0"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.0.11": {
         "dependencies": {
           "System.Runtime": "4.1.0"
@@ -1714,6 +1723,13 @@
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
+    },
+    "Plugin.LocalNotification/10.1.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LiZpaY0iA4aFhRY/Brkm//D8BQKrd/GtGfhx2lg7jQKlXb0lzlvWx/sax28D4ufJgkOGpiQqGKjZ8CMo8yuTiA==",
+      "path": "plugin.localnotification/10.1.8",
+      "hashPath": "plugin.localnotification.10.1.8.nupkg.sha512"
     },
     "runtime.any.System.Collections/4.0.11": {
       "type": "package",

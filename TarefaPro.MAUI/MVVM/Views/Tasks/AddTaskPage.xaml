@@ -25,6 +25,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
 
                 </Grid.RowDefinitions>
 
@@ -150,6 +151,7 @@
                         IsEnabled="{Binding IsEnabledReminder}"
                         MaximumDate="{Binding MaxDateReminde}"
                         MinimumDate="{Binding MinDateReminde}"
+                        DateSelected="entryNotifyDate_DateSelected"
                         Style="{StaticResource entryForm}" />
                 </Border>
 
@@ -180,6 +182,12 @@
                     BackgroundColor="{StaticResource PrimaryGreen}"
                     Clicked="AddTask_Clicked"
                     Style="{StaticResource btnNew}" />
+
+                <ActivityIndicator
+         Grid.Row="12"       
+         IsRunning="{Binding IsBusy}"
+         VerticalOptions="Center"
+         Color="{StaticResource Gray600}" />
 
             </Grid>
         </VerticalStackLayout>

@@ -14,6 +14,8 @@
         public const string IconBlueName = "blue_check";
         public const string IconSalmonName = "salmon_check";
         public const string IconYellowName = "yellow_check";
-        public const string IconOrangeName = "orange_check";        
+        public const string IconOrangeName = "orange_check";
+
+        public const string UrlApi = "https://notifyapimaui.up.railway.app/";
     }
 }

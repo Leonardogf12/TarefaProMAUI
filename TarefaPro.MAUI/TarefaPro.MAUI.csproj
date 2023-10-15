@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;<!--net7.0-maccatalyst--></TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -15,7 +14,7 @@
 		<ApplicationTitle>TarefaPro.MAUI</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.tarefapro.maui</ApplicationId>
+		<ApplicationId>com.companyname.mauinotifyfirebase</ApplicationId>
 		<ApplicationIdGuid>6f47a9bb-c1ef-4d86-8904-f9a0eb3dadfe</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -49,6 +48,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="google-services.json" />
+	  <None Remove="Platforms\Android\Resources\values\strings.xml" />
 	  <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
@@ -79,6 +80,9 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Plugin.Firebase" Version="1.3.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="Plugin.LocalNotification" Version="10.1.8" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 		<PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
 		<PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.5" />
@@ -90,6 +94,10 @@
 
 	<ItemGroup>
 	  <Folder Include="Helpers\Components\Common\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <GoogleServicesJson Include="google-services.json" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -28,7 +28,7 @@ namespace TarefaPro.MAUI
             }
         }
 
-        public const string dbPath = "/data/user/0/com.companyname.tarefapro.maui/files/tarefaprodb.db3";
+        public const string dbPath = "/data/user/0/com.companyname.mauinotifyfirebase/files/tarefaprodb.db3";
         
         #endregion
     }

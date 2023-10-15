@@ -742,3 +742,4 @@ S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_icon.scale-150.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_icon.scale-200.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete_icon.scale-400.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Plugin.LocalNotification.dll

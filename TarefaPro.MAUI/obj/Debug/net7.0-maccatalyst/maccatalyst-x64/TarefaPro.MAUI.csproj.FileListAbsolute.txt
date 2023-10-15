@@ -608,3 +608,4 @@ S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\delete_icon.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\delete_icon@2x.png
 S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\delete_icon@3x.png
+S:\PROJETOS\Projetos MAUI\TarefaPro.MAUI\TarefaProMAUI\TarefaPro.MAUI\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Plugin.LocalNotification.dll

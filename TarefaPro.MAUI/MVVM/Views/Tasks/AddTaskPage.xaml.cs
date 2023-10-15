@@ -1,14 +1,15 @@
+using Plugin.LocalNotification;
 using TarefaPro.MAUI.MVVM.ViewModels.Tasks;
 
 namespace TarefaPro.MAUI.MVVM.Views.Tasks;
 
 public partial class AddTaskPage : ContentPage
 {
-	public AddTaskPage()
+	public AddTaskPage(AddTaskViewModel viewModel)
 	{
 		InitializeComponent();
 
-		BindingContext = new AddTaskViewModel();
+        BindingContext = viewModel;
 	}
 
     private async void Back_Clicked(object sender, EventArgs e)=> await Navigation.PopAsync();
@@ -27,7 +28,7 @@ public partial class AddTaskPage : ContentPage
             await vm.AddTask();
         }
     }
-
+   
     private async Task<bool> ValidateTaskToNextStep()
     {
         if (string.IsNullOrEmpty(entryName.Text))
@@ -62,5 +63,16 @@ public partial class AddTaskPage : ContentPage
         vm.OnAppearing();
     }
 
-   
+    private async void entryNotifyDate_DateSelected(object sender, DateChangedEventArgs e)
+    {
+        var dateReminder = e.NewDate;
+
+        var vm = BindingContext as AddTaskViewModel;
+
+        if(dateReminder > vm.DateEvent) {
+
+            await DisplayAlert("Ops", "A data do lembrete não pode ser maior que a data do evento!. Favor verificar.", "Ok");
+            entryNotifyDate.Date = DateTime.Now;
+        }
+    }
 }

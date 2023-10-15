@@ -1,5 +1,9 @@
-﻿using TarefaPro.MAUI.MVVM.Models;
+﻿using Plugin.Firebase.CloudMessaging;
+using Plugin.LocalNotification;
+using System;
+using TarefaPro.MAUI.MVVM.Models;
 using TarefaPro.MAUI.Repositories.Tasks;
+using TarefaPro.MAUI.Services.Firebase;
 
 namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 {
@@ -7,6 +11,8 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
     public class AddTaskViewModel : BaseViewModel
     {
         private readonly TaskRepository _taskRepository;
+
+        private readonly INotificationFirebaseService _notificationFirebaseService;
 
         #region Properts
 
@@ -34,7 +40,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
                 {
                     BackgroundIsEnabled = (Style)App.Current.Resources["borderFormRemindeDisabled"];
                 }
-               
+
             }
         }
 
@@ -121,8 +127,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
         #endregion
 
-        public AddTaskViewModel()
+        public AddTaskViewModel(INotificationFirebaseService notificationFirebaseService)
         {
+            _notificationFirebaseService = notificationFirebaseService;
             _taskRepository = new TaskRepository();
         }
 
@@ -143,6 +150,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
                 newTask.HourTask = IsEnabledReminder ? HourReminde : new TimeSpan();
 
                 var exist = await CheckIfExistTask(newTask.Name);
+
                 if (exist)
                 {
                     await App.Current.MainPage.DisplayAlert("Ops", "Já existe uma Tarefa com este nome. Favor verificar.", "OK");
@@ -152,7 +160,13 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
                 var result = await _taskRepository.SaveAsync(newTask);
 
                 if (result > 0)
+                {
                     await App.Current.MainPage.DisplayAlert("Tarefa", "Tarefa salva com sucesso.", "OK");
+
+                    if (IsEnabledReminder)
+                        await PostNotification(newTask);
+                }
+
             }
             catch (Exception ex)
             {
@@ -172,10 +186,40 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
             if (result == null) return false;
 
             return true;
+        }        
+
+        private async Task PostNotification(TaskModel model)
+        {
+            await CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
+            var token = await CrossFirebaseCloudMessaging.Current.GetTokenAsync();
+
+            NotificationDto dto = new NotificationDto
+            {
+                Title = "Alerta de Compromisso",
+                Description = $"{model.Name} - {model.Description}",
+                UrlImage = "https://www.pushengage.com/wp-content/uploads/2022/10/How-to-Add-a-Push-Notification-Icon.png",
+                DateTimeOfNotification = model.DateTask.Add(model.HourTask),
+                Token = token
+            };
+
+            var result = await _notificationFirebaseService.PostNotificationAsync(dto, token);
+
+            if (!result)
+            {
+                await App.Current.MainPage.DisplayAlert("Ops", "Ocorreu um erro inesperado ao salvar a notificação automática do lembrete. Mas esta tudo bem, a tarefa continua salva.", "Ok");
+                return;
+            }
         }
+
+        private DateTime DatetimeFormated(TaskModel model)
+        {          
+            return model.DateTask.Add(model.HourTask);
+        }
+
         public void OnAppearing()
         {
             //DateReminde = DateTime.Now;
         }
+
     }
 }

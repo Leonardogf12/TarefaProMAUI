@@ -1,14 +1,17 @@
 ﻿using Android.App;
+using Android.Content.PM;
+using Android.OS;
 using Android.Runtime;
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Plugin.Firebase.CloudMessaging;
 
 namespace TarefaPro.MAUI
 {
-    [Application]
+    [Application]    
     public class MainApplication : MauiApplication
     {
-        public MainApplication(IntPtr handle, JniHandleOwnership ownership)
-            : base(handle, ownership)
+        public MainApplication(IntPtr handle, 
+            JniHandleOwnership ownership) : base(handle, ownership)
         {
             //Remove Entry control underline
             Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("NoUnderline", (h, v) =>
@@ -39,7 +42,7 @@ namespace TarefaPro.MAUI
             });
         }
 
-
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+       
     }
 }
