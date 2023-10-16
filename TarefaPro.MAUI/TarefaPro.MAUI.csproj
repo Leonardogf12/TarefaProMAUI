@@ -50,6 +50,7 @@
 	<ItemGroup>
 	  <None Remove="google-services.json" />
 	  <None Remove="Platforms\Android\Resources\values\strings.xml" />
+	  <None Remove="Resources\drawable\ic_launcher.svg" />
 	  <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
@@ -98,6 +99,12 @@
 
 	<ItemGroup>
 	  <GoogleServicesJson Include="google-services.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\drawable\ic_launcher.svg">
+	    <BaseSize>168,208</BaseSize>
+	  </MauiImage>
 	</ItemGroup>
 
 	<ItemGroup>

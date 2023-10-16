@@ -11,9 +11,9 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="70" />
-            <RowDefinition Height="65" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -152,8 +152,7 @@
         </Grid>
 
         <ActivityIndicator
-            Grid.Row="4"
-            Grid.ColumnSpan="4"
+            Grid.Row="4"           
             IsRunning="{Binding IsBusy}"
             VerticalOptions="Center"
             Color="{StaticResource Gray600}" />

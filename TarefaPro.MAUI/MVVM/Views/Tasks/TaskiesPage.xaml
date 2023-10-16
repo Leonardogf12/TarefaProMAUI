@@ -185,8 +185,7 @@
         </Grid>
 
         <ActivityIndicator
-            Grid.Row="5"
-            Grid.ColumnSpan="4"
+            Grid.Row="5"         
             IsRunning="{Binding IsBusy}"
             VerticalOptions="Center"
             Color="{StaticResource Gray600}" />

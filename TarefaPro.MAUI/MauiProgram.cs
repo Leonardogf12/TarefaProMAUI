@@ -38,7 +38,6 @@ namespace TarefaPro.MAUI
                     fonts.AddFont("Montserrat-Bold.ttf", "MontserratBold");
                     fonts.AddFont("Montserrat-SemiBold.ttf", "MontserratSemiBold");
                 });
-
            
             builder.Services.AddTransient<PopupActionsPage>();
             builder.Services.AddTransient<PopupActionsDetailPage>();
@@ -69,13 +68,12 @@ namespace TarefaPro.MAUI
         {
             builder.ConfigureLifecycleEvents(events =>
             {
-
 #if IOS
-                     events.AddiOS(iOS => iOS.FinishedLaunching((app, launchOptions) =>
-                     {
-                        CrossFirebase.Initialize(app, launchOptions, CreateCrossFirebaseSettings());
-                        return false;
-                     }));
+                events.AddiOS(iOS => iOS.FinishedLaunching((app, launchOptions) =>
+                {
+                    CrossFirebase.Initialize(app, launchOptions, CreateCrossFirebaseSettings());
+                    return false;
+                }));
 #else
                 events.AddAndroid(android => android.OnCreate((activity, state) =>
                 CrossFirebase.Initialize(activity, state, CreateCrossFirebaseSettings())));

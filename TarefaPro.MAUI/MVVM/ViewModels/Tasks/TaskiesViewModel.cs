@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui.Views;
+using IntelliJ.Lang.Annotations;
 using System.Collections.ObjectModel;
 using TarefaPro.MAUI.MVVM.Models;
 using TarefaPro.MAUI.MVVM.ViewModels.Category;
@@ -126,6 +127,8 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
         private async Task LoadTaskies()
         {
+            IsBusy = true;
+
             TaskiesCollection.Clear();
 
             var taskies = await _taskRepository.GetAllAsync();
@@ -135,6 +138,10 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
             foreach (var x in list) TaskiesCollection.Add(x);
 
             TotalTaskies = TaskiesCollection.Count;
+
+            await Task.Delay(300);
+
+            IsBusy = false;
         }
 
         public async void GotoAddTaskPage()

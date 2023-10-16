@@ -25,7 +25,6 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="60" />
-                    <RowDefinition Height="*" />
 
                 </Grid.RowDefinitions>
 
@@ -184,10 +183,10 @@
                     Style="{StaticResource btnNew}" />
 
                 <ActivityIndicator
-         Grid.Row="12"       
-         IsRunning="{Binding IsBusy}"
-         VerticalOptions="Center"
-         Color="{StaticResource Gray600}" />
+                         Grid.Row="6"       
+                         IsRunning="{Binding IsBusy}"
+                         VerticalOptions="Center"
+                         Color="{StaticResource Gray600}" />
 
             </Grid>
         </VerticalStackLayout>

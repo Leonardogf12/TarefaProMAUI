@@ -1,6 +1,4 @@
 ﻿using Plugin.Firebase.CloudMessaging;
-using Plugin.LocalNotification;
-using System;
 using TarefaPro.MAUI.MVVM.Models;
 using TarefaPro.MAUI.Repositories.Tasks;
 using TarefaPro.MAUI.Services.Firebase;
@@ -161,10 +159,10 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
                 if (result > 0)
                 {
-                    await App.Current.MainPage.DisplayAlert("Tarefa", "Tarefa salva com sucesso.", "OK");
-
                     if (IsEnabledReminder)
                         await PostNotification(newTask);
+
+                    await App.Current.MainPage.DisplayAlert("Tarefa", "Tarefa salva com sucesso.", "OK");                   
                 }
 
             }
@@ -183,9 +181,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         {
             var result = await _taskRepository.GetTaskWithNameExistentAsync(name);
 
-            if (result == null) return false;
-
-            return true;
+            return result == null ? false : true;
         }        
 
         private async Task PostNotification(TaskModel model)
@@ -196,7 +192,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
             NotificationDto dto = new NotificationDto
             {
                 Title = "Alerta de Compromisso",
-                Description = $"{model.Name} - {model.Description}",
+                Description = $"{model.Name}: {model.Description}",
                 UrlImage = "https://www.pushengage.com/wp-content/uploads/2022/10/How-to-Add-a-Push-Notification-Icon.png",
                 DateTimeOfNotification = model.DateTask.Add(model.HourTask),
                 Token = token
@@ -206,14 +202,10 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
             if (!result)
             {
-                await App.Current.MainPage.DisplayAlert("Ops", "Ocorreu um erro inesperado ao salvar a notificação automática do lembrete. Mas esta tudo bem, a tarefa continua salva.", "Ok");
+                await App.Current.MainPage.DisplayAlert("Ops", "Ocorreu um erro inesperado ao salvar a notificação automática do lembrete." +
+                    " Mas esta tudo bem, a tarefa continua salva.", "Ok");
                 return;
             }
-        }
-
-        private DateTime DatetimeFormated(TaskModel model)
-        {          
-            return model.DateTask.Add(model.HourTask);
         }
 
         public void OnAppearing()
