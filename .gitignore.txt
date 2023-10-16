@@ -3,25 +3,22 @@
 
 # Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
 
 # Visual Studio Code
 .vscode/
+.vscode-test/
 
-# Rider
+# JetBrains Rider
 .idea/
-
-# User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# User-specific directories
-_ReSharper.*
-*.ReSharper*/
-*.resharper
-*/bin/
-*/obj/
+.idea/inspectionProfiles/
 
 # .NET MAUI
 __history/
@@ -29,117 +26,32 @@ bin/
 obj/
 *.userprefs
 project.lock.json
-.idea/
-.vscode/
 __idrefs/
-.vscode/
-.vscode-test/
 node_modules/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
 
 # NuGet
 *.nupkg
-# The packages folder can be ignored because of PackageReference
 **/packages/*
-# except build/, which is used as an MSBuild target.
 !**/packages/build/
-# Uncomment if necessary, however generally it will be regenerated when needed
 #!**/packages/repositories.config
 
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# VS Code directories
-.vscode/
-.vscode-test/
-
-# Visual Studio cache directory
-.vscode/
-.idea/
-
-# Rider
-.idea/
-
-# User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# User-specific directories
-_ReSharper.*
-.idea/
-.vscode/
-.vscode-test/
-.idea/
-
-# Visual Studio for Mac
-.idea/
-.vscode/
-.vscode-test/
-
-# User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
 # Mono Auto Generated Files
 mono_crash.*
 
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# VS Code directories
-.vscode/
-.vscode-test/
-
-# Rider
-.idea/
-
-# User-specific files
+# User-specific files and directories
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
-# User-specific directories
+# ReSharper
 _ReSharper.*
-.idea/
-.vscode/
-.vscode-test/
-.idea/
+*.ReSharper*/
 
 # Visual Studio for Mac
-.idea/
 .vscode/
 .vscode-test/
-
-# User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# Mono Auto Generated Files
-mono_crash.*
+.idea/
 
 # Windows Installer files
 *.cab
@@ -147,31 +59,40 @@ mono_crash.*
 *.msm
 *.msp
 
-# Windows shortcuts
-*.lnk
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
-# JetBrains Rider
-.idea/
-.idea/inspectionProfiles/
+# Precompiled Headers
+*.gch
+*.pch
 
-# User-specific files
+# Generated files
+*.log
+*.lock
+*.swp
+*.swo
+*.swn
+
+# Backup files
+*~
+*.bak
+
+# Subversion
+.svn
+
+# Visual Studio files
+.vscode/
+.vscode-test/
+.vs
 *.suo
 *.user
-*.suo
 *.userosscache
 *.sln.docstates
-
-# Mono Auto Generated Files
-mono_crash.*
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
 
 # Rider
 .idea/
@@ -183,17 +104,23 @@ mono_crash.*
 *.userosscache
 *.sln.docstates
 
+# Rider-specific files
+.idea/
+.idea/inspectionProfiles/
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+
+# User-specific directories
+_ReSharper.*
+.idea/
+.vscode/
+.vscode-test/
+.idea/
+
 # Mono Auto Generated Files
 mono_crash.*
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
 
 # Windows Installer files
 *.cab
