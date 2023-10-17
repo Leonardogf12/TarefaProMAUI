@@ -60,7 +60,7 @@ public partial class AddTaskPage : ContentPage
         base.OnAppearing();
         var vm = BindingContext as AddTaskViewModel;
 
-        vm.OnAppearing();
+        //vm.OnAppearing();
     }
 
     private async void entryNotifyDate_DateSelected(object sender, DateChangedEventArgs e)

@@ -1,4 +1,5 @@
 ﻿using Plugin.Firebase.CloudMessaging;
+using System.Globalization;
 using TarefaPro.MAUI.MVVM.Models;
 using TarefaPro.MAUI.Repositories.Tasks;
 using TarefaPro.MAUI.Services.Firebase;
@@ -194,7 +195,7 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
                 Title = "Alerta de Compromisso",
                 Description = $"{model.Name}: {model.Description}",
                 UrlImage = "https://www.pushengage.com/wp-content/uploads/2022/10/How-to-Add-a-Push-Notification-Icon.png",
-                DateTimeOfNotification = model.DateTask.Add(model.HourTask),
+                DateTimeOfNotification = SetAndConvertDateTimeToUtcTimezone(model),
                 Token = token
             };
 
@@ -208,10 +209,11 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
             }
         }
 
-        public void OnAppearing()
-        {
-            //DateReminde = DateTime.Now;
+        private DateTime SetAndConvertDateTimeToUtcTimezone(TaskModel model)
+        {         
+            DateTime dtlocal = model.DateTask.Date + model.HourTask;
+          
+            return TimeZoneInfo.ConvertTimeToUtc(dtlocal);        
         }
-
     }
 }

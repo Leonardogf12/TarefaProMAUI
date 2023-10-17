@@ -1,8 +1,6 @@
 ﻿using CommunityToolkit.Maui.Views;
-using IntelliJ.Lang.Annotations;
 using System.Collections.ObjectModel;
 using TarefaPro.MAUI.MVVM.Models;
-using TarefaPro.MAUI.MVVM.ViewModels.Category;
 using TarefaPro.MAUI.MVVM.Views.Components;
 using TarefaPro.MAUI.MVVM.Views.Tasks;
 using TarefaPro.MAUI.Repositories.Tasks;
@@ -94,6 +92,8 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
         {
             try
             {
+                Popup.Close();
+
                 var question = await App.Current.MainPage.DisplayAlert("Excluir", "Deseja realmente excluir esta tarefa?", "Sim", "Não");
 
                 if (question)
@@ -104,12 +104,9 @@ namespace TarefaPro.MAUI.MVVM.ViewModels.Tasks
 
                     var result = await _taskRepository.DeleteAsync(SelectedTask);
 
-                    if (result > 0)
-                    {
-                        Popup.Close();
-
+                    if (result > 0)                                        
                         await App.Current.MainPage.DisplayAlert("Sucesso", "Tarefa excluída com sucesso.", "Ok");
-                    }
+                    
                 }
             }
             catch (Exception ex)
