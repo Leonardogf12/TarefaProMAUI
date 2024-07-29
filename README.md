@@ -1,1 +1,1 @@
-# TarefaPro: App .NET MAUI 7 - Integração; Firebase Push Notification.
+# TarefaPro: App .NET MAUI 7 - Integração; Firebase - Cloud Messaging - Push Notification.
